@@ -172,7 +172,8 @@ a { color: var(--brand-dark); }
 .steps span.on { background: var(--brand); }
 .question { font-weight: 700; margin: 14px 0 10px; }
 
-.feedback { border-radius: var(--radius); padding: 16px; margin: 6px 0 14px; }
+.feedback { border-radius: var(--radius); padding: 16px; margin: 6px 0 14px; scroll-margin-top: 72px; }
+#result { scroll-margin-top: 72px; }
 .feedback.good { background: var(--good-bg); border: 2px solid var(--good); }
 .feedback.oops { background: var(--oops-bg); border: 2px solid var(--oops); }
 .feedback h3 { margin-bottom: 6px; }

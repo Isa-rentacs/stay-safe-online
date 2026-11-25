@@ -726,7 +726,7 @@
       var retry = document.getElementById("retrySim");
       if (retry) retry.addEventListener("click", function () { renderStarAd(mi, step, sc, headHtml); window.scrollTo(0, 0); });
       document.getElementById("next").addEventListener("click", function () { goStep(mi, step + 1); });
-      res.scrollIntoView({ behavior: "smooth", block: "start" });
+      res.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
     document.getElementById("simClaim").addEventListener("click", function () { outcome(false, sc.feedbackClaim); });
     document.getElementById("simDownload").addEventListener("click", function () { outcome(false, sc.feedbackClaim); });
@@ -825,7 +825,7 @@
           choices[0].focus();
         });
         document.getElementById("next").addEventListener("click", function () { goStep(mi, step + 1); });
-        res.scrollIntoView({ behavior: "smooth", block: "start" });
+        res.scrollIntoView({ behavior: "smooth", block: "nearest" });
       });
     });
     document.getElementById("back").addEventListener("click", function () { goStep(mi, step - 1); });
