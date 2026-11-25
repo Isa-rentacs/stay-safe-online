@@ -113,24 +113,6 @@ a { color: var(--brand-dark); }
 .btn:active { transform: scale(0.99); }
 .btn[disabled] { opacity: 0.45; cursor: default; }
 
-.choice {
-  display: block;
-  width: 100%;
-  min-height: 52px;
-  padding: 14px 16px;
-  margin: 0 0 10px;
-  border: 2px solid var(--line);
-  border-radius: 14px;
-  background: var(--card);
-  color: var(--ink);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.choice.picked-good { border-color: var(--good); background: var(--good-bg); }
-.choice.picked-oops { border-color: var(--oops); background: var(--oops-bg); }
-.choice[disabled] { cursor: default; }
-
 /* Home */
 .hero { text-align: center; padding: 12px 4px 4px; }
 .hero p { color: var(--muted); }
@@ -191,51 +173,10 @@ a { color: var(--brand-dark); }
 .nav-row { display: flex; gap: 10px; margin-top: 8px; }
 .nav-row .btn { flex: 1; margin: 0; font-size: 0.95rem; }
 
-/* Fake screens (phone mock-ups) */
-.screen {
-  background: #fff;
-  border: 3px solid #2a2d34;
-  border-radius: 22px;
-  padding: 12px;
-  margin: 0 0 12px;
-  font-size: 0.95rem;
-  overflow-wrap: anywhere;
-}
-.screen-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 8px; text-align: center; }
-.addr {
-  background: #eef0f3;
-  border-radius: 10px;
-  padding: 6px 10px;
-  font-size: 0.85rem;
-  color: #3a3f48;
-  margin: 0 0 10px;
-  text-align: center;
-}
-.result { padding: 8px 4px; border-bottom: 1px solid #eee; }
-.result:last-child { border-bottom: none; }
-.result .r-title { color: #1a0dab; font-weight: 600; }
-.result .r-url { color: #2a7a3b; font-size: 0.8rem; }
-.tag { display: inline-block; font-size: 0.72rem; font-weight: 700; background: #222; color: #fff; border-radius: 4px; padding: 1px 6px; margin-right: 6px; vertical-align: middle; }
-.bubble-from { font-size: 0.8rem; color: var(--muted); margin: 0 0 4px; }
+/* Message bubbles */
 .bubble { background: #e9e9eb; border-radius: 18px; padding: 10px 14px; margin: 0 0 8px; max-width: 92%; }
 .bubble.me { background: #0a84ff; color: #fff; margin-left: auto; }
-.chatline { margin: 0 0 6px; }
-.chatline b { color: #6b3fc4; }
-.popup {
-  border: 2px solid #d33;
-  border-radius: 14px;
-  padding: 12px;
-  text-align: center;
-  background: #fff7f7;
-}
-.popup.calm { border-color: #c8ccd4; background: #fafbfc; }
-.fakebtns { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 8px; }
-.fakebtn { display: inline-block; padding: 6px 12px; border-radius: 8px; background: #e6e8ec; font-size: 0.85rem; font-weight: 600; }
-.fakebtn.loud { background: #1db954; color: #fff; font-size: 1rem; }
-.fakebtn.red { background: #d33; color: #fff; }
-.profile { display: flex; gap: 10px; align-items: center; }
 .avatar { flex: 0 0 48px; height: 48px; border-radius: 50%; background: #f0e6ff; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
-.post { border: 1px solid #eee; border-radius: 12px; padding: 8px 10px; margin: 0 0 8px; }
 
 /* Tell Dad modal */
 .modal {
@@ -283,3 +224,369 @@ a { color: var(--brand-dark); }
 .sim-claim { background: #1db954; color: #fff; font-size: 1.1rem; }
 .sim-claim2 { background: #2f6fde; color: #fff; }
 .sim-actions { margin: 0 0 12px; }
+
+/* Shared realistic-simulation pieces: pretend iPhone, Safari, App Store */
+.sim-root.sim-locked { pointer-events: none; opacity: 0.75; }
+.sim-phone { border: 3px solid #2a2d34; border-radius: 26px; overflow: hidden; margin: 0 0 12px; background: #fff; font-size: 0.95rem; }
+.sim-status { display: flex; justify-content: space-between; padding: 6px 16px 4px; font-size: 0.8rem; font-weight: 700; background: #f2f2f7; }
+.sim-notif { margin: 8px; padding: 10px 12px; border-radius: 14px; background: rgba(242, 242, 247, 0.96); border: 1px solid #e0e0e6; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); font-size: 0.9rem; }
+.sim-notif b { display: block; font-size: 0.8rem; color: var(--muted); }
+.sim-home, .sim-dock { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px 4px; padding: 12px 8px; }
+.sim-home { background: linear-gradient(#cfe3ff, #f5d9ff); min-height: 170px; align-content: start; }
+.sim-dock { background: #e9e9ef; }
+.sim-icon { display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 76px; padding: 2px; border: none; background: transparent; font: inherit; font-size: 0.72rem; color: #1f2430; cursor: pointer; }
+.sim-icon-img { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 13px; font-size: 1.7rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); }
+.sim-page { padding: 10px 12px; min-height: 220px; }
+.sim-gbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.sim-gbar button { min-width: 44px; min-height: 44px; border: none; background: transparent; font-size: 1.2rem; cursor: pointer; color: #5f6368; }
+.sim-glogo { font-size: 1.4rem; font-weight: 700; color: #4a73d8; }
+.sim-gsearch { display: block; width: 100%; min-height: 44px; padding: 8px 14px; margin: 0 0 6px; border: 1px solid #dfe1e5; border-radius: 22px; background: #fff; font: inherit; text-align: left; cursor: pointer; }
+.sim-result { display: block; width: 100%; min-height: 52px; padding: 8px 4px; border: none; border-bottom: 1px solid #eee; background: transparent; font: inherit; text-align: left; cursor: pointer; }
+.sim-result .r-title { display: block; color: #1a0dab; font-weight: 600; }
+.sim-result .r-url { display: block; color: #2a7a3b; font-size: 0.8rem; }
+.sim-urlbar { padding: 6px 10px; background: #f2f2f7; border-top: 1px solid #ddd; }
+.sim-url { display: block; width: 100%; min-height: 44px; border: none; border-radius: 12px; background: #fff; font: inherit; font-size: 0.88rem; color: #3a3f48; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sim-toolbar { display: flex; justify-content: space-around; padding: 2px 4px 6px; background: #f2f2f7; }
+.sim-toolbar button { min-width: 44px; min-height: 44px; border: none; background: transparent; color: #0a6cff; font-size: 1.4rem; cursor: pointer; }
+.sim-tabs-ico { display: inline-block; width: 16px; height: 16px; border: 2px solid #0a6cff; border-radius: 3px; box-shadow: 4px -4px 0 -2px #f2f2f7, 4px -4px 0 0 #0a6cff; }
+.sim-cats { background: #fffbe6; }
+.sim-cats h3 { text-align: center; font-size: 1.3rem; }
+.sim-badge { display: block; margin: 0 auto 10px; min-height: 44px; padding: 6px 14px; border: 2px solid #1f8a4c; border-radius: 999px; background: #e7f6ec; color: #1f8a4c; font: inherit; font-size: 0.85rem; font-weight: 700; cursor: pointer; }
+.sim-loud { display: block; width: 100%; min-height: 52px; margin: 0 0 10px; border: none; border-radius: 12px; background: #ff5a1f; color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+.sim-foot { display: block; width: 100%; min-height: 44px; border: none; background: transparent; color: var(--muted); font: inherit; font-size: 0.8rem; cursor: pointer; }
+.sim-store { padding: 8px 12px 12px; }
+.sim-link { min-height: 44px; padding: 0 4px; border: none; background: transparent; color: #0a6cff; font: inherit; cursor: pointer; }
+.sim-app-head { display: flex; gap: 12px; align-items: flex-start; margin: 4px 0 10px; }
+.sim-app-icon { flex: 0 0 84px; height: 84px; border-radius: 20px; background: #d6ecff; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; }
+.sim-app-meta { flex: 1; min-width: 0; }
+.sim-app-meta strong { display: block; font-size: 1.1rem; }
+.sim-dev { display: block; min-height: 44px; padding: 0; border: none; background: transparent; color: #0a6cff; font: inherit; font-size: 0.9rem; text-align: left; cursor: pointer; }
+.sim-get-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.sim-get { min-width: 76px; min-height: 44px; border: none; border-radius: 999px; background: #0a6cff; color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+.sim-pick { display: block; width: 100%; min-height: 44px; margin: 0 0 8px; border: none; border-radius: 12px; background: #fff4d6; font: inherit; font-size: 0.88rem; font-weight: 700; cursor: pointer; }
+.sim-row { display: flex; justify-content: space-between; align-items: center; width: 100%; min-height: 48px; padding: 0 4px; border: none; border-top: 1px solid #eee; background: transparent; font: inherit; cursor: pointer; }
+.sim-reveal { margin-top: 8px; padding: 10px 12px; border-radius: 12px; background: #f2f2f7; font-size: 0.9rem; }
+.sim-check { font-weight: 700; font-size: 0.95rem; margin: 0 0 10px; }
+.sim-hint { background: #fffbea; border: 1px solid #e6d27a; border-radius: 12px; padding: 10px 12px; font-size: 0.95rem; scroll-margin-top: 72px; }
+.sim-hint[hidden] { display: none; }
+
+/* Modules 2-4 simulations: search ads, video feed, download page,
+   cookie banner, permission alert, game pop-ups, game chat, Messages */
+.sim-rel { position: relative; }
+.sim-homebar { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; border: none; background: #f2f2f7; cursor: pointer; }
+.sim-homebar span { display: block; width: 134px; height: 5px; border-radius: 3px; background: #1f2430; }
+.sim-overlay { position: absolute; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center; padding: 14px; background: rgba(20, 22, 28, 0.45); }
+.sim-overlay.sim-bottom { align-items: flex-end; padding: 8px; }
+.sim-reveal p { margin: 0; }
+
+.sim-adline { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+.sim-spons { font-size: 0.78rem; font-weight: 700; color: #3a3f48; }
+.sim-adinfo { min-width: 44px; min-height: 44px; border: none; background: transparent; font-size: 1.1rem; color: #5f6368; cursor: pointer; }
+.sim-result .r-desc { display: block; color: #4d5156; font-size: 0.85rem; }
+.sim-shopnow { display: block; min-height: 44px; margin: 0 0 6px; padding: 0 16px; border: 1px solid #dfe1e5; border-radius: 22px; background: #fff; color: #1a0dab; font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+.sim-salepage { text-align: center; background: #fff7f7; }
+.sim-fakebuy { display: inline-block; padding: 10px 22px; border-radius: 12px; background: #1db954; color: #fff; font-weight: 800; margin-bottom: 8px; }
+
+.sim-video { position: relative; min-height: 330px; padding: 12px 64px 12px 12px; background: linear-gradient(160deg, #ff8fb8, #8a4fd8 60%, #2a1a4a); color: #fff; display: flex; flex-direction: column; justify-content: space-between; }
+.sim-vid-art { text-align: center; font-size: 3rem; line-height: 1.2; padding-top: 18px; }
+.sim-vid-art span { font-size: 1rem; font-weight: 700; }
+.sim-rail { position: absolute; right: 6px; bottom: 16px; display: flex; flex-direction: column; gap: 6px; }
+.sim-rail button { display: flex; flex-direction: column; align-items: center; min-width: 50px; min-height: 56px; border: none; background: transparent; color: #fff; font: inherit; font-size: 1.5rem; cursor: pointer; }
+.sim-rail button span { font-size: 0.7rem; font-weight: 700; }
+.sim-vcap p { margin: 0; font-size: 0.9rem; }
+.sim-vuser { display: flex; align-items: center; gap: 8px; }
+.sim-vname { min-height: 44px; padding: 0; border: none; background: transparent; color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+.sim-follow { min-height: 36px; padding: 0 12px; border: 1px solid #fff; border-radius: 8px; background: transparent; color: #fff; font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.sim-paid { display: block; min-height: 32px; padding: 0; border: none; background: transparent; color: rgba(255, 255, 255, 0.8); font: inherit; font-size: 0.75rem; cursor: pointer; }
+.sim-more { min-height: 32px; padding: 0 2px; border: none; background: transparent; color: rgba(255, 255, 255, 0.75); font: inherit; font-weight: 700; cursor: pointer; }
+.sim-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.sim-htag { min-height: 44px; padding: 0 6px; border: none; background: transparent; color: #fff; font: inherit; font-size: 0.9rem; font-weight: 800; cursor: pointer; }
+.sim-vbtns { display: flex; gap: 8px; padding: 8px; }
+.sim-shopbar, .sim-codebtn { flex: 1; min-height: 48px; border: none; border-radius: 12px; font: inherit; font-size: 0.85rem; font-weight: 800; cursor: pointer; }
+.sim-shopbar { background: #ff3b7f; color: #fff; }
+.sim-codebtn { background: #f2f2f7; color: #1f2430; }
+
+.sim-dlpage h3 { text-align: center; }
+.sim-preview { text-align: center; font-size: 2rem; background: #fdf3ff; border-radius: 12px; padding: 8px; margin: 0 0 8px; }
+.sim-dlad { position: relative; margin: 0 0 8px; }
+.sim-admark { position: absolute; top: 2px; right: 6px; font-size: 0.6rem; color: rgba(255, 255, 255, 0.85); }
+.sim-dl { display: block; width: 100%; min-height: 56px; border: none; border-radius: 12px; background: #1db954; color: #fff; font: inherit; font-size: 1.05rem; font-weight: 800; cursor: pointer; }
+.sim-file { font-size: 0.85rem; color: #3a3f48; margin: 0 0 8px; }
+.sim-filelink { min-height: 44px; padding: 0 4px; border: none; background: transparent; color: #0a6cff; font: inherit; font-size: 0.85rem; text-decoration: underline; cursor: pointer; }
+
+.sim-libhead { font-weight: 800; font-size: 1.1rem; color: #1f56b8; margin: 0 0 8px; }
+.sim-cookie { position: absolute; left: 8px; right: 8px; bottom: 8px; z-index: 5; padding: 12px; border-radius: 14px; background: #fff; border: 1px solid #c8ccd4; box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.18); font-size: 0.9rem; }
+.sim-cookie p { margin: 4px 0 8px; }
+.sim-cbtns { display: flex; gap: 8px; }
+.sim-cbtn { flex: 1; min-height: 44px; border: 1px solid #1f56b8; border-radius: 10px; background: #fff; color: #1f56b8; font: inherit; font-weight: 700; cursor: pointer; }
+.sim-cbtn.wide { display: block; width: 100%; }
+.sim-clink { display: block; width: 100%; min-height: 44px; border: none; background: transparent; color: #5c6370; font: inherit; font-size: 0.85rem; text-decoration: underline; cursor: pointer; }
+.sim-crow { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sim-switch { position: relative; flex: 0 0 56px; width: 56px; height: 44px; border: none; background: transparent; cursor: pointer; }
+.sim-switch span { position: absolute; left: 2px; top: 7px; width: 52px; height: 30px; border-radius: 15px; background: #d1d1d6; }
+.sim-switch span::after { content: ""; position: absolute; left: 2px; top: 2px; width: 26px; height: 26px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+.sim-switch.on span { background: #34c759; }
+.sim-switch.on span::after { left: 24px; }
+
+.sim-flash { min-height: 300px; padding: 16px; background: #1c1c1e; color: #fff; text-align: center; }
+.sim-flash.on { background: #fff7c2; color: #1f2430; }
+.sim-flash-name { font-weight: 700; }
+.sim-flash-btn { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #555; background: #2c2c2e; font-size: 3rem; cursor: pointer; }
+.sim-flash.on .sim-flash-btn { background: #ffe066; border-color: #f2c200; }
+.sim-alert { width: 100%; max-width: 280px; border-radius: 14px; overflow: hidden; background: rgba(245, 245, 247, 0.98); color: #1f2430; text-align: center; }
+.sim-alert-t { font-weight: 700; font-size: 0.95rem; margin: 14px 14px 4px; }
+.sim-alert-b { font-size: 0.8rem; margin: 0 14px 12px; }
+.sim-alert button { display: block; width: 100%; min-height: 44px; border: none; border-top: 1px solid #c8c8cc; background: transparent; color: #0a6cff; font: inherit; font-size: 1rem; cursor: pointer; }
+
+.sim-gamescreen { min-height: 300px; padding: 10px 12px; background: linear-gradient(#bfe6ff, #e9d6ff); }
+.sim-gtitle { display: flex; justify-content: space-between; font-weight: 800; margin: 0 0 10px; }
+.sim-levelup { text-align: center; background: #fff; border-radius: 16px; padding: 16px; margin-top: 20px; }
+.sim-stars { font-size: 2rem; margin: 0 0 8px; }
+.sim-gbtn { min-height: 52px; padding: 0 24px; border: none; border-radius: 14px; background: #2f6fde; color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+.sim-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.sim-bubble { min-height: 56px; border: none; background: transparent; font-size: 2rem; cursor: pointer; }
+.sim-gpop { width: 100%; max-width: 320px; padding: 14px; border: 3px solid #d33; border-radius: 16px; background: #fff7f7; text-align: center; }
+.sim-gpop p { margin: 0 0 6px; }
+.sim-countdown { font-size: 1.3rem; font-weight: 800; color: #d33; }
+.sim-later { display: block; margin: 6px auto 0; min-height: 44px; padding: 0 12px; border: none; background: transparent; color: #8a8f98; font: inherit; font-size: 0.8rem; cursor: pointer; }
+
+.sim-shop { background: linear-gradient(#2a1a4a, #4a2a7a); color: #fff; }
+.sim-shophead { display: flex; align-items: center; justify-content: space-between; margin: 0 0 10px; }
+.sim-gback { min-height: 44px; padding: 0 10px; border: none; border-radius: 10px; background: rgba(255, 255, 255, 0.15); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.sim-deal { padding: 12px; border: 3px solid #ffcc00; border-radius: 16px; background: rgba(255, 255, 255, 0.08); text-align: center; }
+.sim-deal p { margin: 0 0 6px; }
+.sim-deal .small { color: #e0d6f5; }
+.sim-deal-t { font-weight: 800; color: #ffcc00; }
+.sim-shop .sim-countdown { color: #ff6b6b; font-size: 1.8rem; }
+.sim-items { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+.sim-item { display: flex; flex-direction: column; align-items: center; min-height: 80px; padding: 6px; border: none; border-radius: 12px; background: rgba(255, 255, 255, 0.12); color: #fff; font: inherit; font-size: 1.6rem; cursor: pointer; }
+.sim-item span { font-size: 0.8rem; }
+.sim-field-fake { margin: 0 0 6px; padding: 8px 10px; border: 1px solid #c8ccd4; border-radius: 8px; background: #fff; color: #1f2430; text-align: left; font-size: 0.9rem; }
+
+.sim-chat { min-height: 320px; display: flex; flex-direction: column; background: #fff; }
+.sim-chathead, .sim-msghead { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 2px 6px; background: #f2f2f7; border-bottom: 1px solid #e0e0e6; }
+.sim-chatname { flex: 1; min-height: 44px; border: none; background: transparent; font: inherit; font-weight: 800; cursor: pointer; }
+.sim-dots { min-width: 44px; min-height: 44px; border: none; background: transparent; font-size: 1.3rem; color: #0a6cff; cursor: pointer; }
+.sim-thread { flex: 1; padding: 10px; }
+.sim-day { text-align: center; font-size: 0.75rem; color: var(--muted); margin: 0 0 8px; }
+.sim-compose { display: block; width: calc(100% - 16px); min-height: 44px; margin: 6px 8px 8px; padding: 0 14px; border: 1px solid #d1d1d6; border-radius: 22px; background: #fff; color: #8a8f98; font: inherit; text-align: left; cursor: pointer; }
+.sim-qt { display: flex; background: #d1d4da; }
+.sim-qt button { flex: 1; min-height: 44px; border: none; border-right: 1px solid #b8bcc4; background: transparent; font: inherit; font-size: 0.85rem; cursor: pointer; }
+.sim-qt button:last-child { border-right: none; }
+.sim-keys { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px 4px 12px; background: #d1d4da; color: #3a3f48; font-size: 0.95rem; letter-spacing: 0.3em; }
+.sim-sheet { width: 100%; }
+.sim-sheet button { display: block; width: 100%; min-height: 50px; border: none; border-bottom: 1px solid #d1d1d6; background: #f9f9fb; color: #0a6cff; font: inherit; cursor: pointer; }
+.sim-sheet button:first-child { border-radius: 14px 14px 0 0; }
+.sim-sheet button:nth-child(3) { border-radius: 0 0 14px 14px; border-bottom: none; }
+.sim-sheet button.danger { color: #d33; font-weight: 700; }
+.sim-sheet button.cancel { margin-top: 8px; border-radius: 14px; font-weight: 700; }
+
+.sim-sender { flex: 1; display: flex; flex-direction: column; align-items: center; font-size: 0.8rem; padding: 4px 44px 4px 0; }
+.sim-sender small { color: var(--muted); }
+.sim-av { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #a0a4ad; color: #fff; font-weight: 700; }
+.sim-junk { margin: 8px; padding: 8px 10px; border-radius: 12px; background: #f2f2f7; font-size: 0.8rem; text-align: center; color: #3a3f48; }
+.sim-junkbtn { display: block; width: 100%; min-height: 44px; border: none; background: transparent; color: #0a6cff; font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+.sim-linkcard { display: block; width: 92%; min-height: 56px; padding: 8px 12px; border: none; border-radius: 14px; background: #e9e9eb; font: inherit; text-align: left; cursor: pointer; }
+.sim-linkcard b, .sim-linkcard span { display: block; }
+.sim-linkcard span { font-size: 0.8rem; color: var(--muted); }
+.sim-gzapp { text-align: center; background: #fff8ee; }
+.sim-ok { color: var(--good); font-weight: 700; }
+
+/* Modules 5-7 simulations: Messages inbox, Camera + QR poster, virus page,
+   Safari tab switcher, Robux generator, in-game chat, mystery chest,
+   friend requests */
+.sim-sheet button.endgrp { border-radius: 0 0 14px 14px; border-bottom: none; }
+.sim-sheet button.solo { border-radius: 14px; border-bottom: none; }
+.sim-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px; background: #d1d4da; }
+.sim-chips button { flex: 1 1 auto; min-height: 44px; padding: 6px 12px; border: none; border-radius: 22px; background: #fff; color: #1f2430; font: inherit; font-size: 0.85rem; cursor: pointer; }
+
+.sim-inbox { min-height: 260px; }
+.sim-inbox-t { font-size: 1.5rem; font-weight: 800; margin: 6px 12px 4px; }
+.sim-inrow { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 64px; padding: 8px 10px 8px 2px; border: none; border-bottom: 1px solid #eee; background: #fff; font: inherit; text-align: left; cursor: pointer; }
+.sim-dot { flex: 0 0 12px; color: #0a84ff; font-size: 0.7rem; text-align: center; }
+.sim-inmain { flex: 1; min-width: 0; }
+.sim-inname { display: flex; justify-content: space-between; gap: 6px; }
+.sim-inname small { color: var(--muted); font-size: 0.75rem; white-space: nowrap; }
+.sim-inprev { display: block; color: var(--muted); font-size: 0.82rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.sim-cam { background: #000; color: #fff; }
+.sim-camtop, .sim-camctrl { display: flex; align-items: center; justify-content: space-between; padding: 4px 12px; }
+.sim-camtop span { font-size: 0.75rem; font-weight: 700; color: #ffd60a; letter-spacing: 0.08em; }
+.sim-camtop button, .sim-zoom { min-width: 44px; min-height: 44px; border: none; border-radius: 50%; background: rgba(255, 255, 255, 0.14); color: #fff; font: inherit; font-size: 0.9rem; cursor: pointer; }
+.sim-viewfinder { position: relative; padding: 14px 12px 70px; background: linear-gradient(#7fb069, #4a7c3a); }
+.sim-viewfinder.snap { animation: simSnap 0.3s; }
+@keyframes simSnap { 0% { filter: brightness(3); } 100% { filter: none; } }
+.sim-poster { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; padding: 12px; border: 4px solid #f2c200; border-radius: 6px; background: #fffdf2; color: #1f2430; font: inherit; font-size: 0.85rem; cursor: pointer; }
+.sim-qr { display: grid; grid-template-columns: repeat(7, 12px); gap: 0; padding: 6px; background: #fff; border: 1px solid #ccc; }
+.sim-qr i { display: block; width: 12px; height: 12px; }
+.sim-qr i.on { background: #111; }
+.sim-qrchip { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; min-height: 48px; width: 86%; padding: 6px 12px; border: none; border-radius: 14px; background: #ffd60a; color: #1f2430; font: inherit; font-size: 0.85rem; cursor: pointer; overflow-wrap: anywhere; }
+.sim-qrchip span { font-size: 0.72rem; }
+.sim-camctrl { padding: 8px 18px; }
+.sim-shutter { width: 64px; height: 64px; border: 4px solid #fff; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 3px #000; cursor: pointer; }
+
+.sim-dino { background: #f3fbe9; min-height: 400px; }
+.sim-virusbg { background: rgba(120, 0, 0, 0.6); align-items: flex-start; }
+.sim-virus { width: 100%; padding: 12px; border: 3px solid #d33; border-radius: 12px; background: #fff; text-align: center; }
+.sim-virus h3 { color: #d33; }
+.sim-virus p { margin: 0 0 6px; }
+.sim-claim.sim-red { background: #d33; }
+.sim-telno { display: block; width: 100%; min-height: 44px; margin-top: 8px; border: none; background: transparent; color: #0a6cff; font: inherit; font-size: 0.85rem; text-decoration: underline; cursor: pointer; }
+
+.sim-tabgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 14px 10px; min-height: 260px; background: #3a3a3c; align-content: start; }
+.sim-tabcard { min-width: 0; border-radius: 12px; overflow: hidden; background: #fff; }
+.sim-tabcard-head { display: flex; align-items: center; justify-content: space-between; gap: 2px; padding-left: 6px; background: #e5e5ea; font-size: 0.68rem; font-weight: 700; min-width: 0; }
+.sim-tabcard-head span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sim-tabx { flex: 0 0 44px; min-height: 44px; border: none; background: transparent; font-size: 1rem; font-weight: 700; cursor: pointer; }
+.sim-tabprev { display: block; width: 100%; min-height: 110px; border: none; background: #f3fbe9; font: inherit; font-size: 0.85rem; text-align: center; cursor: pointer; }
+.sim-tabprev-red { background: #ffe5e5; color: #d33; font-weight: 800; }
+.sim-tabbot { display: flex; align-items: center; justify-content: space-between; padding: 4px 12px; background: #2c2c2e; color: #fff; font-size: 0.85rem; }
+
+.sim-rbx { background: #fffbe6; text-align: center; }
+.sim-ticker { font-size: 0.8rem; color: var(--good); font-weight: 700; margin: 0 0 8px; }
+.sim-input { display: block; width: 100%; min-height: 52px; margin: 0 0 8px; padding: 4px 10px; border: 1px solid #c8ccd4; border-radius: 8px; background: #fff; font: inherit; font-size: 0.9rem; text-align: left; cursor: pointer; }
+.sim-input small { display: block; font-size: 0.7rem; color: var(--muted); }
+.sim-input .ph { color: #a0a4ad; }
+.sim-amts { display: flex; gap: 6px; margin: 0 0 6px; }
+.sim-amts button { flex: 1; min-height: 44px; border: 2px solid #f2c200; border-radius: 10px; background: #fff; font: inherit; font-size: 0.85rem; font-weight: 700; cursor: pointer; }
+.sim-amts button.on { background: #f2c200; }
+.sim-warn { color: #d33; font-weight: 700; font-size: 0.85rem; margin: 0; }
+
+.sim-gc { min-height: 340px; display: flex; flex-direction: column; background: #22272e; color: #e6e8ec; }
+.sim-gcworld { text-align: center; font-size: 1.6rem; line-height: 1.4; padding: 10px; background: linear-gradient(#8fd3ff, #7cc46a); }
+.sim-gclog { flex: 1; padding: 8px 10px; }
+.sim-gcsys { margin: 0; padding: 6px 10px; font-size: 0.75rem; color: #9aa4b2; }
+.sim-gcmsg { margin: 0 0 6px; font-size: 0.9rem; }
+.sim-gcmsg b { color: #7ee787; }
+.sim-gcname { min-height: 32px; padding: 0 2px; border: none; background: transparent; color: #f9c74f; font: inherit; font-weight: 800; cursor: pointer; }
+.sim-gc .sim-day { color: #9aa4b2; }
+.sim-gcin { display: block; width: calc(100% - 16px); min-height: 44px; margin: 6px 8px 8px; padding: 0 14px; border: 1px solid #444c56; border-radius: 10px; background: #2d333b; color: #9aa4b2; font: inherit; text-align: left; cursor: pointer; }
+.sim-gcin.light { width: 100%; margin: 6px 0 8px; border-color: #d1d1d6; background: #fff; color: #8a8f98; }
+.sim-chathead.dark { background: #2d333b; border-bottom-color: #444c56; color: #e6e8ec; }
+.sim-chathead.dark .sim-link, .sim-chathead.dark .sim-dots { color: #58a6ff; }
+.sim-handle { min-height: 32px; padding: 0 4px; border: none; border-radius: 6px; background: rgba(88, 166, 255, 0.18); color: #58a6ff; font: inherit; font-weight: 700; cursor: pointer; }
+.sim-pcard { width: 100%; max-width: 280px; padding: 14px; border-radius: 16px; background: #fff; color: #1f2430; text-align: center; }
+.sim-pcard p { margin: 0 0 8px; }
+.sim-pcard button { display: block; width: 100%; min-height: 44px; margin: 0 0 6px; border: 1px solid #d1d1d6; border-radius: 10px; background: #f2f2f7; color: #0a6cff; font: inherit; font-weight: 600; cursor: pointer; }
+.sim-pcard button.danger { color: #d33; }
+.sim-pcard button.fill { background: #0a6cff; border-color: #0a6cff; color: #fff; }
+.sim-pc-av { width: 56px; height: 56px; margin: 0 auto 6px; border-radius: 50%; background: #f0e6ff; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
+
+.sim-chestbox { font-size: 3rem; line-height: 1.1; }
+.sim-oddsbtn { color: #e0d6f5; }
+.sim-odds { color: #1f2430; }
+
+.sim-friends { min-height: 300px; }
+.sim-frtabs { display: flex; gap: 4px; margin: 0 0 10px; padding: 3px; border-radius: 10px; background: #eef0f3; }
+.sim-frtabs button { flex: 1; min-height: 44px; border: none; border-radius: 8px; background: transparent; font: inherit; font-size: 0.9rem; cursor: pointer; }
+.sim-frtabs button.on { background: #fff; font-weight: 700; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+.sim-frwho { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 56px; margin: 0 0 8px; padding: 0; border: none; background: transparent; font: inherit; text-align: left; cursor: pointer; }
+.sim-prof { text-align: center; }
+.sim-prof p { margin: 0 0 6px; }
+.sim-cbtn.fill { background: #1f56b8; color: #fff; }
+.sim-cbtn.red { border-color: #d33; color: #d33; }
+.sim-buildgrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; padding: 0 10px 6px; }
+.sim-cell { min-height: 44px; border: 1px dashed #5a6472; border-radius: 4px; background: #7cc46a; font-size: 1.3rem; cursor: pointer; }
+.sim-cell.on { border-style: solid; background: #c58b5b; }
+
+/* Mission 0 + Modules 8-11 simulations: Messages threads, photo profile,
+   post composer with crop/location, group chat, AI chat, voice message,
+   Phone app, and a pretend iPhone with real side buttons (screenshots) */
+.sim-notifbtn { display: block; width: calc(100% - 16px); color: inherit; font: inherit; font-size: 0.9rem; text-align: left; cursor: pointer; }
+.sim-sent { display: block; margin-top: 4px; color: #0a6cff; font-size: 0.82rem; }
+.sim-senderbtn { border: none; background: transparent; font: inherit; font-size: 0.8rem; color: inherit; min-height: 44px; cursor: pointer; }
+.sim-who { margin: 0 0 2px 6px; font-size: 0.72rem; color: var(--muted); }
+.sim-gtag { font-size: 0.75rem; color: #9aa4b2; padding-left: 6px; }
+.sim-chathead.dark strong { flex: 1; text-align: center; }
+.sim-photobub { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 150px; min-height: 96px; margin: 0 0 8px; border: none; border-radius: 18px; background: #dfe6ef; font: inherit; font-size: 2rem; cursor: pointer; }
+.sim-photobub span { font-size: 0.75rem; color: var(--muted); }
+.sim-silly { background: #fff1b8; }
+.sim-blurpic { background: linear-gradient(135deg, #c9ced6, #e4e7ec); filter: saturate(0.6); }
+.sim-gone { margin: 0 0 8px 6px; font-size: 0.8rem; font-style: italic; color: var(--muted); }
+.sim-sysline { display: block; width: 100%; min-height: 44px; margin: 0 0 4px; border: none; background: transparent; color: var(--muted); font: inherit; font-size: 0.78rem; cursor: pointer; }
+.sim-bubbtn { display: block; border: none; font: inherit; text-align: left; cursor: pointer; }
+.sim-minipage { margin: 0 0 8px; padding: 10px; border: 2px solid #d33; border-radius: 10px; background: #fff7f7; font-size: 0.85rem; }
+.sim-minipage .sim-field-fake { margin: 6px 0 0; }
+
+.sim-feed { padding: 0 10px 10px; }
+.sim-profhead { display: flex; align-items: center; gap: 10px; margin: 4px 0 8px; }
+.sim-profhead .sim-pc-av { margin: 0; width: 48px; height: 48px; }
+.sim-post { border-top: 1px solid #eee; padding: 6px 0 4px; }
+.sim-posthead { margin: 0 0 4px; font-size: 0.82rem; }
+.sim-photo { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 120px; padding: 0; border: none; border-radius: 10px; font: inherit; cursor: pointer; }
+.sim-ph { font-size: 2.6rem; line-height: 1.1; text-align: center; }
+.sim-ph small { display: block; font-size: 1.6rem; }
+.sim-ph-hoodie { background: #dbe8ff; }
+.sim-ph-pool { background: #c9f0ff; }
+.sim-ph-steps { background: #f3e6d4; }
+.sim-postbar { display: flex; gap: 4px; }
+.sim-postbar button { min-width: 44px; min-height: 44px; border: none; background: transparent; font-size: 1.2rem; cursor: pointer; }
+.sim-cap { margin: 0 0 4px; font-size: 0.88rem; }
+.sim-capbtn { display: block; width: 100%; min-height: 44px; padding: 0; border: none; background: transparent; font: inherit; font-size: 0.88rem; text-align: left; cursor: pointer; }
+.sim-zoomwrap { align-items: flex-start; }
+.sim-zoombox { width: 100%; padding: 10px; border-radius: 14px; background: #fff; }
+.sim-zoombox p { margin: 0 0 6px; }
+.sim-photo.big { position: relative; flex-direction: column; gap: 8px; min-height: 200px; margin: 0 0 8px; font-size: 3.4rem; cursor: default; }
+.sim-clue { min-height: 44px; padding: 4px 10px; border: none; border-radius: 6px; background: #1f3f8a; color: #fff; font: inherit; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.04em; cursor: pointer; }
+.sim-clue-plain { background: transparent; color: #3a6f8a; font-weight: 400; }
+.sim-sign { position: absolute; right: 8px; top: 8px; background: #2f7d32; }
+
+.sim-composer { padding: 0 10px 8px; }
+.sim-comphead { display: flex; align-items: center; justify-content: space-between; }
+.sim-link.b { font-weight: 800; }
+.sim-room { position: relative; display: flex; gap: 8px; min-height: 150px; margin: 4px 0 8px; padding: 10px; border-radius: 10px; background: #f5e9ff; }
+.sim-room.editing { outline: 3px solid #ffd60a; outline-offset: -3px; padding: 10px 46px; }
+.sim-win { flex: 0 0 40%; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px; border: 6px solid #fff; border-radius: 6px; background: #bfe3ff; font: inherit; font-size: 2rem; cursor: pointer; }
+.sim-win span { font-size: 1.1rem; }
+.sim-bed { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 2.2rem; line-height: 1.2; }
+.sim-handle { position: absolute; top: 0; bottom: 0; width: 44px; border: none; background: rgba(255, 214, 10, 0.85); font: inherit; font-size: 1.3rem; font-weight: 800; cursor: pointer; }
+.sim-handle-l { left: 0; border-radius: 10px 0 0 10px; }
+.sim-handle-r { right: 0; border-radius: 0 10px 10px 0; }
+.sim-composer .sim-row { padding: 0 2px; }
+
+.sim-lock { min-height: 300px; padding: 16px 8px; text-align: center; background: linear-gradient(#6a8fd8, #b78ad8); color: #fff; }
+.sim-lock-time { font-size: 3rem; font-weight: 300; line-height: 1; margin: 6px 0 2px; }
+.sim-lock-date { margin: 0 0 14px; }
+.sim-lock .sim-notifbtn { color: #1f2430; }
+.sim-lock-hint { margin-top: 40px; font-size: 0.8rem; opacity: 0.85; }
+.sim-portal { background: #f4f8ff; }
+.sim-portal-logo { text-align: center; font-size: 1.3rem; font-weight: 800; color: #1f56b8; margin: 4px 0 2px; }
+.sim-portal .sim-cbtn.wide { margin-bottom: 4px; }
+
+.sim-ai { display: flex; flex-direction: column; min-height: 320px; background: #fbfaff; }
+.sim-aihead { display: flex; align-items: center; justify-content: center; position: relative; min-height: 44px; border-bottom: 1px solid #ece8f7; }
+.sim-aihead .sim-dots { position: absolute; right: 2px; top: 0; }
+.sim-aimsg { margin: 0 0 6px; padding: 8px 2px; font-size: 0.92rem; }
+.sim-aiacts { display: flex; gap: 2px; margin: 0 0 8px; }
+.sim-aiacts button { min-width: 44px; min-height: 44px; border: none; border-radius: 10px; background: transparent; font-size: 1.1rem; cursor: pointer; }
+.sim-aifoot { margin: 0 0 6px; text-align: center; font-size: 0.72rem; color: var(--muted); }
+.sim-buddy { background: #fbf4ff; }
+.sim-ency { background: #fffaf0; }
+.sim-voice { display: flex; align-items: center; gap: 8px; min-height: 48px; margin: 0 0 6px; padding: 0 14px; border: none; border-radius: 18px; background: #e9e9eb; font: inherit; cursor: pointer; }
+.sim-voice span { letter-spacing: -1px; color: #0a6cff; }
+.sim-transcript { margin: 0 0 8px; padding: 8px 10px; border-radius: 12px; background: #f2f2f7; font-size: 0.85rem; }
+.sim-inbox-t.sim-sub { font-size: 1.05rem; margin-top: 12px; }
+.sim-call { min-height: 300px; padding: 24px 14px; text-align: center; background: linear-gradient(#3a4a5c, #1f2430); color: #fff; }
+.sim-call .bubble { margin: 16px auto 0; color: #1f2430; text-align: left; }
+
+.sim-gcbar { display: flex; align-items: center; gap: 6px; margin: 6px 8px 8px; }
+.sim-gcbar .sim-gcin { flex: 1; width: auto; margin: 0; }
+.sim-gcpic { flex: 0 0 44px; min-height: 44px; border: 1px solid #444c56; border-radius: 10px; background: #2d333b; font-size: 1.2rem; cursor: pointer; }
+.sim-giftcard { margin: 6px 0 8px; padding: 10px; border: 2px solid #f9c74f; border-radius: 12px; background: #2d333b; font-size: 0.88rem; }
+.sim-giftname { display: block; margin: 4px 0 8px; font-weight: 800; color: #f9c74f; }
+.sim-redrow { color: #d33; font-weight: 700; }
+
+/* Side buttons: thin pills just outside the phone, 44px-wide tap areas */
+.sim-device { position: relative; margin: 0 0 12px; padding: 0 20px; }
+.sim-device .sim-phone { position: relative; margin: 0; }
+.sim-side { position: absolute; z-index: 6; width: 44px; height: 56px; padding: 0; border: none; background: transparent; cursor: pointer; }
+.sim-side span { position: absolute; top: 4px; bottom: 4px; width: 6px; border-radius: 3px; background: #2a2d34; }
+.sim-volup { left: -12px; top: 90px; }
+.sim-voldn { left: -12px; top: 152px; }
+.sim-volup span, .sim-voldn span { left: 26px; }
+.sim-power { right: -12px; top: 110px; }
+.sim-power span { right: 26px; }
+.sim-side:active span { background: #0a6cff; }
+.sim-shot { position: absolute; left: 10px; bottom: 10px; z-index: 7; display: flex; flex-direction: column; align-items: center; width: 64px; padding: 6px 4px; border: 3px solid #fff; border-radius: 8px; background: #dfe6ef; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); font-size: 1.3rem; }
+.sim-shot span { font-size: 0.6rem; color: #1f2430; }
+.sim-phone.sim-snap { animation: simSnap 0.35s; }
