@@ -11,7 +11,7 @@
   --good-bg: #e7f6ec;
   --oops: #b45d00;
   --oops-bg: #fff3e2;
-  --dad: #e2462f;
+  --parents: #e2462f;
   --radius: 16px;
   color-scheme: light;
 }
@@ -69,12 +69,12 @@ a { color: var(--brand-dark); }
   display: flex;
   align-items: center;
 }
-.tell-dad {
+.tell-parents {
   min-height: 44px;
   padding: 0 16px;
   border: none;
   border-radius: 999px;
-  background: var(--dad);
+  background: var(--parents);
   color: #fff;
   font: inherit;
   font-size: 1rem;
@@ -178,7 +178,7 @@ a { color: var(--brand-dark); }
 .bubble.me { background: #0a84ff; color: #fff; margin-left: auto; }
 .avatar { flex: 0 0 48px; height: 48px; border-radius: 50%; background: #f0e6ff; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
 
-/* Tell Dad modal */
+/* Tell Parents modal */
 .modal {
   position: fixed;
   inset: 0;

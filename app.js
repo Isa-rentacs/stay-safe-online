@@ -10,25 +10,25 @@
     ["Who wants this?", "Who made this message, button or app, and what are they after?"],
     ["What do they get?", "Money, your info, your attention, your photos, your account?"],
     ["Can I undo it?", "If I tap, send or post, can I take it back?"],
-    ["Would I be OK showing Dad?", "If not, that's the sign to show Dad first."]
+    ["Would I be OK showing Parents?", "If not, that's the sign to show Parents first."]
   ];
 
   /* ---------- All 12 modules ---------- */
   var MODULES = [
     {
       title: "Oops is OK",
-      blurb: "Telling Dad right away gets help, not trouble.",
+      blurb: "Telling Parents right away gets help, not trouble.",
       intro: [
         "Everyone taps the wrong thing sometimes. Grown-ups too. The internet is full of tricks made by people whose whole job is fooling people.",
-        "When something goes wrong, the fastest fix is telling Dad right away. You get <strong>help, not trouble</strong>. That rule is the start of every mission in this game."
+        "When something goes wrong, the fastest fix is telling Parents right away. You get <strong>help, not trouble</strong>. That rule is the start of every mission in this game."
       ],
       scenarios: [
         {
           title: "Play Star Catcher — then the ad pops up",
           sim: "starAd",
           question: "Play the toy game below. Tap the stars to score. After a bit, something will pop up — just like in a real game. Decide what to tap, for real. There is no list of answers here.",
-          todo: ["The little ✕ inside an ad is part of the ad — tapping it can still count as tapping the ad.", "The safe way out is the browser's own tab close, up in the tab bar, outside the ad.", "Closing the tab is always OK. Telling Dad is always OK."],
-          feedbackGood: "Yes! You closed the tab instead of tapping inside the ad. The ad was fake — there was no prize, and CLAIM would have tried to steal your account or install junk. Closing the tab stops it, and telling Dad fixes it in one minute.",
+          todo: ["The little ✕ inside an ad is part of the ad — tapping it can still count as tapping the ad.", "The safe way out is the browser's own tab close, up in the tab bar, outside the ad.", "Closing the tab is always OK. Telling Parents is always OK."],
+          feedbackGood: "Yes! You closed the tab instead of tapping inside the ad. The ad was fake — there was no prize, and CLAIM would have tried to steal your account or install junk. Closing the tab stops it, and telling Parents fixes it in one minute.",
           feedbackClaim: "Oops — that's what the trick wants. There is no prize. CLAIM and DOWNLOAD are the trap: they lead to a fake page that asks for your password, or tries to install junk. The phone was never going to give you free Robux.",
           feedbackFakeX: "Oops — that little ✕ is part of the ad, not a real close button. In real ads the ✕ is often a tap area itself, so tapping it can open the bad page anyway. The real close is the browser's tab ✕, up in the tab bar, outside the ad."
         },
@@ -36,13 +36,13 @@
           title: "Days later",
           sim: "daysLater",
           question: "Last week, in game chat, you told a player where your family gets pizza every Friday. Now it feels like maybe that was too much. Do what you would really do on the pretend phone below. (Tapping the bar at the very bottom goes to the Home Screen.)",
-          todo: ["It's never too late to tell.", "That 'hmm, maybe that was too much' feeling is worth listening to.", "Dad would much rather know than not know."],
-          feedbackGood: "Exactly. It's never too late! Dad can help you think about it, and maybe block or report the player. Noticing that something felt off is a great skill.",
-          feedbackLate: "It's never too late! Dad can help even if it happened last week or last month. That 'hmm' feeling is worth telling him about.",
-          feedbackDelete: "Deleting doesn't undo what was said, and it means you're carrying the worry alone. Telling Dad works much better.",
-          feedbackBlock: "Blocking is OK, and Dad might want to block or report the player too. But blocking doesn't undo what was said, so tell Dad now as well. It's never too late.",
-          feedbackDad: "Exactly. Tell Dad now. It's never too late! Dad can help you think about it, and maybe block or report the player. Noticing that something felt off is a great skill.",
-          dadLabel: "Tell Dad"
+          todo: ["It's never too late to tell.", "That 'hmm, maybe that was too much' feeling is worth listening to.", "Parents would much rather know than not know."],
+          feedbackGood: "Exactly. It's never too late! Parents can help you think about it, and maybe block or report the player. Noticing that something felt off is a great skill.",
+          feedbackLate: "It's never too late! Parents can help even if it happened last week or last month. That 'hmm' feeling is worth telling them about.",
+          feedbackDelete: "Deleting doesn't undo what was said, and it means you're carrying the worry alone. Telling Parents works much better.",
+          feedbackBlock: "Blocking is OK, and Parents might want to block or report the player too. But blocking doesn't undo what was said, so tell Parents now as well. It's never too late.",
+          feedbackParents: "Exactly. Tell Parents now. It's never too late! Parents can help you think about it, and maybe block or report the player. Noticing that something felt off is a great skill.",
+          parentsLabel: "Tell Parents"
         },
         {
           title: "Your friend is worried",
@@ -52,11 +52,11 @@
           feedbackGood: "That's a true friend move. Parents can close the page and make sure nothing bad happened. Most parents are relieved, not mad.",
           feedbackSecret: "Being a good friend is great, but keeping this secret leaves Mia stuck with a scary problem. Grown-ups can actually fix it.",
           feedbackCard: "Oops. That's what the trick wants. The card number would go straight to a stranger.",
-          feedbackDad: "Telling Dad is a true friend move too! Secrets about scary online stuff are the kind you should never keep. Dad can help Mia get her mom, and parents can close the page and make sure nothing bad happened.",
-          dadLabel: "Tell Dad"
+          feedbackParents: "Telling Parents is a true friend move too! Secrets about scary online stuff are the kind you should never keep. Parents can help Mia get her mom, and parents can close the page and make sure nothing bad happened.",
+          parentsLabel: "Tell Parents"
         }
       ],
-      dinner: "What's one 'oops' Dad has made online?"
+      dinner: "What's one 'oops' your parents have made online?"
     },
     {
       title: "Phone, apps, web: who runs what?",
@@ -69,12 +69,12 @@
         {
           title: "Which one is the browser?",
           sim: "findBrowser",
-          question: "Dad texted you a little job. Do it on the pretend iPhone below. Tap the real things you would tap on your own phone. There is no list of answers here.",
+          question: "Parents texted you a little job. Do it on the pretend iPhone below. Tap the real things you would tap on your own phone. There is no list of answers here.",
           todo: ["Browser = the window (Safari, Chrome).", "Search engine = the finder (Google, Bing).", "Website = a page someone made."],
           feedbackGood: "Right! Safari is the window. Google is a website you're looking at <em>through</em> that window. Safari's own buttons (the address bar, Back, Tabs) sit around the edges and stay the same on every website. That's how you know they belong to the browser.",
           feedbackGoogle: "Close! Google is a search engine, a website that finds other websites. That button belongs to Google's page, not to the browser. The browser is Safari, the app you opened to see it. Its own buttons are around the edges: the address bar and the toolbar at the bottom.",
           feedbackResult: "The cat video is on a website. The window you see websites through is the browser, Safari. To open a new tab you need one of Safari's own buttons, down in the toolbar at the bottom.",
-          feedbackDad: "Asking Dad is always OK! Here's the secret: Safari is the window, and Google is a website you look at through it. Safari's own buttons (address bar, Back, Tabs) are around the edges of the screen."
+          feedbackParents: "Asking Parents is always OK! Here's the secret: Safari is the window, and Google is a website you look at through it. Safari's own buttons (address bar, Back, Tabs) are around the edges of the screen."
         },
         {
           title: "Who wrote this page?",
@@ -86,17 +86,17 @@
           feedbackGoogle: "Nope. Anyone can paste a 'Checked by Google' badge on their page. Google only points to pages. It doesn't write them or check that they're true. (And cats definitely don't live to 200!) To see whose site you're on, look at the address bar.",
           feedbackApple: "Apple made the phone and Safari, but not the websites you visit. Those are made by millions of different people, and anyone can write 'Apple Approved' on their own page. The address bar shows whose site it really is.",
           feedbackMore: "That button belongs to the page itself. It just takes you deeper into the same site, which still won't tell you who made it. The address bar at the top of Safari shows whose site you're on.",
-          feedbackDad: "Asking Dad is always OK! He'd show you the address bar: best-cat-facts.example. Whoever owns that site wrote the page, and that could be anyone. Being the top result doesn't make it true."
+          feedbackParents: "Asking Parents is always OK! They'd show you the address bar: best-cat-facts.example. Whoever owns that site wrote the page, and that could be anyone. Being the top result doesn't make it true."
         },
         {
           title: "Who runs the app?",
           sim: "appStore",
-          question: "You found a free game in the App Store. Before you ask Dad to download it, find out two things on its page: who made it, and how it makes money.",
+          question: "You found a free game in the App Store. Before you ask Parents to download it, find out two things on its page: who made it, and how it makes money.",
           todo: ["Every app and website has an owner.", "'Free' usually means they earn money another way.", "Always ask: who runs this, and what do they want?"],
           feedbackGood: "Right! FunFizz Games, a company, made it, and it wants to make money from it. 'Free' apps still need money, so they earn it from ads, purchases, or information about players. Knowing who's behind an app helps you guess what it wants.",
-          feedbackGet: "Hold on! GET downloads the app. Installing anything is an 'ask Dad first' thing, and you haven't found out who runs it yet. Every app is made by someone, usually a company, and companies want something: money, your time, or your info.",
+          feedbackGet: "Hold on! GET downloads the app. Installing anything is an 'ask Parents first' thing, and you haven't found out who runs it yet. Every app is made by someone, usually a company, and companies want something: money, your time, or your info.",
           feedbackApple: "That badge is from the App Store, which Apple runs. Apple checks apps a little, but most apps are made by other companies. Look for the name right under the app's title to see who really made it.",
-          feedbackDad: "Asking Dad is always OK! Together you'd find it: FunFizz Games Inc. made it (not Apple), and it earns money from in-app purchases and information about players. 'Free' usually means they earn money another way."
+          feedbackParents: "Asking Parents is always OK! Together you'd find it: FunFizz Games Inc. made it (not Apple), and it earns money from in-app purchases and information about players. 'Free' usually means they earn money another way."
         }
       ],
       dinner: "Name three apps on your phone. Who made each one?"
@@ -112,12 +112,12 @@
         {
           title: "The top result",
           sim: "adSearch",
-          question: "Dad wants to get you a new bike helmet. He texted: \"Can you find a page that helps us choose one? Not an ad!\" Use the pretend phone below. Tap what you would really tap.",
+          question: "Parents want to get you a new bike helmet. They texted: \"Can you find a page that helps us choose one? Not an ad!\" Use the pretend phone below. Tap what you would really tap.",
           todo: ["'Sponsored' = paid to be there.", "Ads at the top aren't automatically the best.", "Scroll a little to find regular results."],
           feedbackGood: "Yes! You skipped the result marked 'Sponsored' and picked a regular one. 'Sponsored' means the company paid to be at the top. It's not there because it's the best answer.",
           feedbackAdInfo: "Sharp eyes! You checked the tiny 'Sponsored' label, and it says helmetdeals paid to be there. 'Sponsored' means the company paid to be at the top. It's not there because it's the best answer.",
           feedbackAd: "Oops, that's a common mix-up! The top spot often goes to whoever paid. See the tiny 'Sponsored' label above it? That one is an ad. Companies pay to be first, and it's not there because it's the best answer.",
-          feedbackDad: "Asking Dad is always OK! Together you'd spot the tiny 'Sponsored' label on the top result. That means the company paid to be first. The regular results are just below it."
+          feedbackParents: "Asking Parents is always OK! Together you'd spot the tiny 'Sponsored' label on the top result. That means the company paid to be first. The regular results are just below it."
         },
         {
           title: "Sparkle Sam's lip balm",
@@ -125,19 +125,19 @@
           question: "Your friend Mia (pretend) sent you this video. Before you text her back, find out why Sparkle Sam is really talking about this lip balm. Tap around the video like you would in a real app.",
           todo: ["#ad, #partner, #sponsored or a discount code = paid post.", "Influencers can be friendly AND paid at the same time.", "Ask: would they still say this if nobody paid them?"],
           feedbackGood: "Exactly. '#ad', '#partner' and 'Paid partnership' mean GlowBerry is paying her to say it. Influencers often get paid or get free stuff to talk about products. It's an ad, even when it feels like a friend talking.",
-          feedbackShop: "Hold on! Buying anything is an 'ask Dad first' thing. And look closer at the video: it's an ad. GlowBerry is paying her to say it, even though it feels like a friend talking.",
+          feedbackShop: "Hold on! Buying anything is an 'ask Parents first' thing. And look closer at the video: it's an ad. GlowBerry is paying her to say it, even though it feels like a friend talking.",
           feedbackCode: "Oops! That discount code helps her earn money from every sale. Maybe she really does love it, but look closer at the video: GlowBerry is paying her to say it. It's an ad.",
-          feedbackDad: "Asking Dad is always OK! He'd show you the '#ad' and '#partner' tags in the caption and the 'Paid partnership' label. Those mean GlowBerry is paying her to say it. It's an ad, even when it feels like a friend talking."
+          feedbackParents: "Asking Parents is always OK! They'd show you the '#ad' and '#partner' tags in the caption and the 'Paid partnership' label. Those mean GlowBerry is paying her to say it. It's an ad, even when it feels like a friend talking."
         },
         {
           title: "Too many Download buttons",
           sim: "downloadPage",
           question: "You want unicorn coloring pages to print. You found this site, and there are lots of buttons. Do what you would really do on the pretend phone below.",
-          todo: ["Big flashy buttons on download sites are often ads.", "The real link is usually small and next to the file name.", "Downloading or installing anything? Ask Dad first."],
-          feedbackGood: "Great eye! The real link is often the small plain one next to the file name, and the big green buttons are ads (see the tiny 'Ad' marks?). Downloading anything is an 'ask Dad first' thing, so show Dad before you open it.",
-          feedbackLoud: "Oops, that's the trap! Big, flashy buttons on download pages are often ads that lead to junk apps or tricky pages. See the tiny 'Ad' mark above it? Tapping lots of them to be sure would just open a bunch of ads, and maybe something worse. Slow down and ask Dad.",
-          feedbackClose: "Leaving is always OK! A page full of big flashy download buttons is a page full of ads. Next time, ask Dad to help: the real link is usually the small plain one next to the file name.",
-          feedbackDad: "Great thinking. The real link is often the small plain one next to the file name, and the big green buttons are ads. Downloading anything is an 'ask Dad first' thing."
+          todo: ["Big flashy buttons on download sites are often ads.", "The real link is usually small and next to the file name.", "Downloading or installing anything? Ask Parents first."],
+          feedbackGood: "Great eye! The real link is often the small plain one next to the file name, and the big green buttons are ads (see the tiny 'Ad' marks?). Downloading anything is an 'ask Parents first' thing, so show Parents before you open it.",
+          feedbackLoud: "Oops, that's the trap! Big, flashy buttons on download pages are often ads that lead to junk apps or tricky pages. See the tiny 'Ad' mark above it? Tapping lots of them to be sure would just open a bunch of ads, and maybe something worse. Slow down and ask Parents.",
+          feedbackClose: "Leaving is always OK! A page full of big flashy download buttons is a page full of ads. Next time, ask Parents to help: the real link is usually the small plain one next to the file name.",
+          feedbackParents: "Great thinking. The real link is often the small plain one next to the file name, and the big green buttons are ads. Downloading anything is an 'ask Parents first' thing."
         }
       ],
       dinner: "Find one ad together. What tiny word gave it away?"
@@ -153,7 +153,7 @@
         "🍪 <strong>Cookies</strong> on a site you chose to open are fine. It just means the site remembers you. Accept or Reject are both safe.",
         "🔑 If it asks for something of yours (<strong>location, camera, photos, contacts, money, a password or code</strong>), ask: does this app need it to do its job? A map needs your location. A game doesn't.",
         "🚫 If it <strong>popped up out of nowhere</strong> or rushes you, press nothing. Just close it.",
-        "💵 <strong>Money or installing anything</strong> means asking Dad first. Every time."
+        "💵 <strong>Money or installing anything</strong> means asking Parents first. Every time."
       ],
       scenarios: [
         {
@@ -163,28 +163,28 @@
           todo: ["Cookies on a site you chose = fine.", "Accept or Reject are both safe.", "Cookie banners never need your name, school or password."],
           feedbackGood: "Yes! On a site you chose, cookies just help it remember you. Either answer is safe. Pick one and keep going. (And a cookie banner never needs your name or school, so never type real info to get past a pop-up.)",
           feedbackClose: "Closing is always OK! But no need to panic next time: cookie banners are normal on real websites you chose. Accept and Reject are both safe here, so you can pick one and keep looking for your book.",
-          feedbackDad: "Asking Dad is always OK! He'd tell you cookie banners are normal on real websites. On a site you chose, Accept and Reject are both safe. And a cookie banner never needs your name or school."
+          feedbackParents: "Asking Parents is always OK! They'd tell you cookie banners are normal on real websites. On a site you chose, Accept and Reject are both safe. And a cookie banner never needs your name or school."
         },
         {
           title: "The flashlight wants your contacts",
           sim: "permission",
-          question: "You just installed a flashlight app (with Dad's OK). You open it, and something pops up. Tap what you would really tap.",
-          todo: ["Location, camera, photos, contacts: ask 'does it need this to do its job?'", "If not, tap Don't Allow.", "Not sure? Ask Dad. You can change it later in Settings."],
+          question: "You just installed a flashlight app (with Parents' OK). You open it, and something pops up. Tap what you would really tap.",
+          todo: ["Location, camera, photos, contacts: ask 'does it need this to do its job?'", "If not, tap Don't Allow.", "Not sure? Ask Parents. You can change it later in Settings."],
           feedbackGood: "Exactly right. Ask: does this app need it to do its job? A map needs location. A video chat needs the camera. A flashlight needs nothing of yours. (See? The light works fine without your contacts.)",
           feedbackAllow: "Oops. A flashlight just turns on a light! It has no reason to see your friends' phone numbers. That info might get sold.",
           feedbackSelect: "Even picking just a few gives it those friends' names and numbers, and you can't take that back. 'Don't Allow' is the right tap. A flashlight needs nothing of yours.",
           feedbackClose: "Closing the app is always OK! Next time you can also just tap Don't Allow. Ask: does this app need it to do its job? A flashlight needs nothing of yours.",
-          feedbackDad: "Asking Dad is always OK! He'd ask: does a flashlight need your contacts to do its job? Nope! So Don't Allow is the right tap. You can always change it later in Settings."
+          feedbackParents: "Asking Parents is always OK! They'd ask: does a flashlight need your contacts to do its job? Nope! So Don't Allow is the right tap. You can always change it later in Settings."
         },
         {
           title: "The surprise bonus pack",
           sim: "bonusPack",
           question: "You're playing Bubble Pop Party on the pretend phone below. Keep playing and do what you would really do. (On this pretend iPhone, tapping the bar at the very bottom is like swiping up to close the app.)",
-          todo: ["Popped up out of nowhere? Press nothing. Close it.", "A timer or 'hurry' = a trick to stop you thinking.", "Money or installing = ask Dad first. Every time."],
-          feedbackGood: "Perfect. It came out of nowhere, it's rushing you, and it costs money. That's three reasons to press nothing. You closed the game, and you can ask Dad later if you really want it.",
-          feedbackAccept: "That timer is there to rush you so you don't think! Installing things and spending money are always 'ask Dad first'.",
+          todo: ["Popped up out of nowhere? Press nothing. Close it.", "A timer or 'hurry' = a trick to stop you thinking.", "Money or installing = ask Parents first. Every time."],
+          feedbackGood: "Perfect. It came out of nowhere, it's rushing you, and it costs money. That's three reasons to press nothing. You closed the game, and you can ask Parents later if you really want it.",
+          feedbackAccept: "That timer is there to rush you so you don't think! Installing things and spending money are always 'ask Parents first'.",
           feedbackLater: "Sometimes even small buttons on surprise pop-ups do sneaky things. The safest move is to press nothing and close the game itself.",
-          feedbackDad: "Perfect. It came out of nowhere, it's rushing you, and it costs money. That's three reasons to press nothing. Asking Dad is exactly right."
+          feedbackParents: "Perfect. It came out of nowhere, it's rushing you, and it costs money. That's three reasons to press nothing. Asking Parents is exactly right."
         }
       ],
       dinner: "Look at your Settings → Privacy together. Which apps can see your location?"
@@ -201,35 +201,35 @@
           title: "Only 2 minutes left!",
           sim: "hurryShop",
           question: "You open the shop in a game you play. Look around, notice how it makes you feel, and do what you would really do. (Tapping the bar at the very bottom is like swiping up to close the app.)",
-          todo: ["Timers, countdowns, 'only today' = Hurry trick.", "If you feel rushed, slow down on purpose.", "Real friends and real deals can wait 5 minutes for you to ask Dad."],
+          todo: ["Timers, countdowns, 'only today' = Hurry trick.", "If you feel rushed, slow down on purpose.", "Real friends and real deals can wait 5 minutes for you to ask Parents."],
           feedbackGood: "Yes! You didn't let the timer push you. That's the Hurry trick: timers and 'before it's gone' are there to stop you from thinking. Real good deals don't vanish in 2 minutes.",
           feedbackClaim: "It looks nice, but see the timer and '47 players looking'? That's the Hurry trick, built to make you tap without thinking. And now it wants your password! Real good deals don't vanish in 2 minutes.",
-          feedbackDad: "Yes! Timers and 'before it's gone' are the Hurry trick. They're there to stop you from thinking. Real good deals can wait 5 minutes for you to ask Dad.",
-          dadLabel: "Tell Dad"
+          feedbackParents: "Yes! Timers and 'before it's gone' are the Hurry trick. They're there to stop you from thinking. Real good deals can wait 5 minutes for you to ask Parents.",
+          parentsLabel: "Tell Parents"
         },
         {
           title: "Just between us",
           sim: "secretChat",
           question: "A player you've only met in the game sends you messages. Do what you would really do in the pretend chat below.",
-          todo: ["'You're so special/mature' from someone you don't know = warning sign.", "'Keep it secret from your parents' = always tell Dad.", "Good people never ask kids to hide things from their family."],
-          feedbackGood: "Wow, you spotted both tricks: 'You're special' and 'Keep it secret'! Someone who wants you to hide things from your parents is not being a friend. Tell Dad, and it's OK to stop replying.",
-          feedbackBlock: "Great move! Blocking stops the chat, and it's OK to stop replying. You spotted two tricks: 'You're special' (so mature!) and 'Keep it secret'. Someone who wants you to hide things from your parents is not being a friend. Now tell Dad too.",
-          feedbackLeave: "Leaving the chat is OK. It's fine to stop replying! That 'hmm' feeling was right: 'You're special' plus 'Keep it secret' are two tricks. Someone who wants you to hide things from your parents is not being a friend. Tell Dad too.",
-          feedbackAgree: "It does feel nice. That's how the trick works! A stranger using compliments ('You're special') plus a secret ('Keep it secret') is a big warning sign. Tell Dad, and it's OK to stop replying.",
-          feedbackAsk: "Good question to wonder about, but asking them keeps the chat going. The safe move is to tell Dad instead. It's OK to stop replying, or to block them.",
-          dadLabel: "Tell Dad"
+          todo: ["'You're so special/mature' from someone you don't know = warning sign.", "'Keep it secret from your parents' = always tell Parents.", "Good people never ask kids to hide things from their family."],
+          feedbackGood: "Wow, you spotted both tricks: 'You're special' and 'Keep it secret'! Someone who wants you to hide things from your parents is not being a friend. Tell Parents, and it's OK to stop replying.",
+          feedbackBlock: "Great move! Blocking stops the chat, and it's OK to stop replying. You spotted two tricks: 'You're special' (so mature!) and 'Keep it secret'. Someone who wants you to hide things from your parents is not being a friend. Now tell Parents too.",
+          feedbackLeave: "Leaving the chat is OK. It's fine to stop replying! That 'hmm' feeling was right: 'You're special' plus 'Keep it secret' are two tricks. Someone who wants you to hide things from your parents is not being a friend. Tell Parents too.",
+          feedbackAgree: "It does feel nice. That's how the trick works! A stranger using compliments ('You're special') plus a secret ('Keep it secret') is a big warning sign. Tell Parents, and it's OK to stop replying.",
+          feedbackAsk: "Good question to wonder about, but asking them keeps the chat going. The safe move is to tell Parents instead. It's OK to stop replying, or to block them.",
+          parentsLabel: "Tell Parents"
         },
         {
           title: "Your account will close!",
           sim: "scaryText",
           question: "This text just arrived on your phone, and your heart jumps a little. Do what you would really do. (Tapping the bar at the very bottom goes to the Home Screen.)",
-          todo: ["Scary message about your account? Don't tap the link.", "Open the real app yourself to check.", "Feel the push → slow down → ask Dad."],
+          todo: ["Scary message about your account? Don't tap the link.", "Open the real app yourself to check.", "Feel the push → slow down → ask Parents."],
           feedbackGood: "Yes! You opened the real game app yourself, and your account is fine. If something's really wrong with your account, the real app will tell you. Never use a link in a scary message.",
-          feedbackJunk: "Yes! Reporting it as junk deletes it without tapping the link. If something's really wrong with your account, the real app will tell you. Never use a link in a scary message. Show Dad too.",
-          feedbackLink: "Oops, that link goes to a fake login page that steals your password. Fear plus hurry plus 'just this once' is a triple trick. Don't log in. Open the real app yourself, or show Dad.",
-          feedbackReply: "Real companies never ask for your password in a message, and replying tells them your number is real. Don't reply. Show Dad.",
-          feedbackDad: "Yes! Showing Dad is exactly right. Fear plus hurry plus 'just this once' is a triple trick. If something's really wrong with your account, the real app will tell you. Never use a link in a scary message.",
-          dadLabel: "Show Dad"
+          feedbackJunk: "Yes! Reporting it as junk deletes it without tapping the link. If something's really wrong with your account, the real app will tell you. Never use a link in a scary message. Show Parents too.",
+          feedbackLink: "Oops, that link goes to a fake login page that steals your password. Fear plus hurry plus 'just this once' is a triple trick. Don't log in. Open the real app yourself, or show Parents.",
+          feedbackReply: "Real companies never ask for your password in a message, and replying tells them your number is real. Don't reply. Show Parents.",
+          feedbackParents: "Yes! Showing Parents is exactly right. Fear plus hurry plus 'just this once' is a triple trick. If something's really wrong with your account, the real app will tell you. Never use a link in a scary message.",
+          parentsLabel: "Show Parents"
         }
       ],
       dinner: "Which of the 5 tricks do you think works best on grown-ups?"
@@ -246,36 +246,36 @@
           title: "The package text",
           sim: "packageText",
           question: "You didn't order anything. Then your phone buzzes with a new text. Check it on the pretend phone below and do what you would really do.",
-          todo: ["Package you didn't order = fake.", "Don't reply, don't tap the link.", "Show Dad, then delete."],
-          feedbackJunk: "Right! You didn't order anything, it came from a random number, and it wants money through a link. That's a fake. Delete and Report Junk got rid of it without tapping the link. Show Dad too.",
-          feedbackPay: "Oops! The $1.99 is just bait. The real goal is to get the card number so they can take much more. You didn't order anything, so there's no package. Don't tap, show Dad, then delete.",
-          feedbackReply: "Replying tells scammers your number is real, so they send more. Don't reply. Show Dad and delete.",
-          feedbackDad: "Right! You didn't order anything, it came from a random number, and it wants money through a link. That's a fake. Show Dad, then delete it.",
-          dadLabel: "Show Dad"
+          todo: ["Package you didn't order = fake.", "Don't reply, don't tap the link.", "Show Parents, then delete."],
+          feedbackJunk: "Right! You didn't order anything, it came from a random number, and it wants money through a link. That's a fake. Delete and Report Junk got rid of it without tapping the link. Show Parents too.",
+          feedbackPay: "Oops! The $1.99 is just bait. The real goal is to get the card number so they can take much more. You didn't order anything, so there's no package. Don't tap, show Parents, then delete.",
+          feedbackReply: "Replying tells scammers your number is real, so they send more. Don't reply. Show Parents and delete.",
+          feedbackParents: "Right! You didn't order anything, it came from a random number, and it wants money through a link. That's a fake. Show Parents, then delete it.",
+          parentsLabel: "Show Parents"
         },
         {
           title: "The QR code poster",
           sim: "qrPoster",
           question: "You're at the park with your friend Mia (pretend). She sees a poster and grabs your arm: \"Scan it!\" Your Camera is already open on the pretend phone below. Do what you would really do. (Tapping the bar at the very bottom closes the camera.)",
-          todo: ["QR code = a link you can't read.", "Prize you didn't enter = fake.", "Only scan QR codes you trust, and ask Dad if you're not sure."],
-          feedbackGood: "Smart! A QR code is a hidden link, and 'everyone wins' is fake. QR codes from random posters or stickers can go to fake sites. Only scan ones you trust, like a restaurant menu with Dad.",
+          todo: ["QR code = a link you can't read.", "Prize you didn't enter = fake.", "Only scan QR codes you trust, and ask Parents if you're not sure."],
+          feedbackGood: "Smart! A QR code is a hidden link, and 'everyone wins' is fake. QR codes from random posters or stickers can go to fake sites. Only scan ones you trust, like a restaurant menu with Parents.",
           feedbackOpen: "Oops! A QR code is just a link in disguise, so you can't tell where it goes by looking at it. And a 'free prize' you didn't enter is a classic trick. Even if you don't type anything, the page could still trick you or try to get you to install something. Best to skip it.",
-          feedbackDad: "Smart! Asking Dad is exactly right. A QR code is a hidden link, and 'everyone wins' is fake. Only scan ones you trust, like a restaurant menu with Dad."
+          feedbackParents: "Smart! Asking Parents is exactly right. A QR code is a hidden link, and 'everyone wins' is fake. Only scan ones you trust, like a restaurant menu with Parents."
         },
         {
           title: "Virus detected!",
           sim: "virusPopup",
           question: "You're reading dinosaur facts for fun on the pretend phone below. Keep reading, and if something appears, do what you would really do.",
           todo: ["Websites can't scan your phone. 'Virus found' pages are fake.", "Don't tap buttons inside. Close the whole tab.", "Never call numbers from pop-ups."],
-          feedbackGood: "Yes! Websites can't look inside your phone to find viruses. This was just a scary page. You closed the whole tab (tabs button, then ✕) without tapping anything inside it. Now tell Dad.",
-          feedbackClean: "That button is the trap! It might try to install something or ask for money. The 'virus' isn't real: websites can't look inside your phone. Close the tab (tap the tabs button, then ✕) and tell Dad.",
-          feedbackCall: "That number goes to scammers, not Apple. They'd try to get money or passwords. Never call numbers from pop-ups. Close the tab (tap the tabs button, then ✕) and tell Dad.",
-          feedbackInside: "Oops! Even the small OK is part of the scary page, so tapping it can open more pop-ups or a download. Don't tap buttons inside. Close the whole tab (tap the tabs button, then ✕) and tell Dad.",
-          feedbackDad: "Yes! Telling Dad is exactly right. Websites can't look inside your phone to find viruses. This is just a scary page. Dad can close the tab (tabs button, then ✕).",
-          dadLabel: "Tell Dad"
+          feedbackGood: "Yes! Websites can't look inside your phone to find viruses. This was just a scary page. You closed the whole tab (tabs button, then ✕) without tapping anything inside it. Now tell Parents.",
+          feedbackClean: "That button is the trap! It might try to install something or ask for money. The 'virus' isn't real: websites can't look inside your phone. Close the tab (tap the tabs button, then ✕) and tell Parents.",
+          feedbackCall: "That number goes to scammers, not Apple. They'd try to get money or passwords. Never call numbers from pop-ups. Close the tab (tap the tabs button, then ✕) and tell Parents.",
+          feedbackInside: "Oops! Even the small OK is part of the scary page, so tapping it can open more pop-ups or a download. Don't tap buttons inside. Close the whole tab (tap the tabs button, then ✕) and tell Parents.",
+          feedbackParents: "Yes! Telling Parents is exactly right. Websites can't look inside your phone to find viruses. This is just a scary page. Parents can close the tab (tabs button, then ✕).",
+          parentsLabel: "Tell Parents"
         }
       ],
-      dinner: "Has Dad ever gotten a fake text? What did it say?"
+      dinner: "Has Parents ever gotten a fake text? What did it say?"
     },
     {
       title: "Free Robux isn't free",
@@ -284,7 +284,7 @@
         "Games cost a lot to make, so many 'free' games make money in sneaky ways. And scammers know kids want game money, so they use it as bait.",
         "If someone offers free game currency, they want something from you."
       ],
-      parentNote: "<strong>Note for Dad:</strong> Turn on <strong>Ask to Buy</strong> (Settings → your name → Family Sharing → Ask to Buy). Then every purchase or download sends a request to your phone first.",
+      parentNote: "<strong>Note for Parents:</strong> Turn on <strong>Ask to Buy</strong> (Settings → your name → Family Sharing → Ask to Buy). Then every purchase or download sends a request to your phone first.",
       scenarios: [
         {
           title: "The Robux generator",
@@ -294,29 +294,29 @@
           feedbackGood: "Exactly! You closed it. Nobody can 'make' game money for free. Sites like this steal accounts, and asking for your password is the giveaway.",
           feedbackPassword: "Oops. Generators don't exist. The site wants your password to steal your account, and the 'offers' are tricks too. Never type your game password anywhere except the real app.",
           feedbackUsername: "Good instinct to protect your password! But the site will still push you to 'complete offers', which are more tricks (see? one even asks for your password after all). There's no such thing as a Robux generator. Just close it.",
-          feedbackDad: "Exactly! Nobody can 'make' game money for free. Sites like this steal accounts, and asking for your password is the giveaway. Showing Dad is a great move."
+          feedbackParents: "Exactly! Nobody can 'make' game money for free. Sites like this steal accounts, and asking for your password is the giveaway. Showing Parents is a great move."
         },
         {
           title: "The gift card deal",
           sim: "giftCard",
           question: "You're playing a building game. A player you don't know starts sending messages in the server chat. Do what you would really do on the pretend phone below.",
-          todo: ["Someone asking for a gift card code = scam.", "Gift card codes are like cash: gone forever once sent.", "Block, then tell Dad."],
-          feedbackGood: "Yes! Anyone who asks for gift card codes is almost always scamming. That's true for grown-ups too. Blocking was right. Now tell Dad.",
-          feedbackNo: "Yes! Saying no is right. Anyone who asks for gift card codes is almost always scamming, and a gift card code is like cash. Now block them and tell Dad.",
-          feedbackDeal: "They'd keep the $25 and send nothing. A gift card code is like cash. Once you send it, it's gone. Say no, block, and tell Dad.",
-          feedbackFirst: "Smart thinking, but they won't, and chatting more gives them time to pressure you. See? They're already rushing you. Just say no and tell Dad.",
-          feedbackDad: "Yes! Anyone who asks for gift card codes is almost always scamming. That's true for grown-ups too. Telling Dad is exactly right, and you can block them too.",
-          dadLabel: "Tell Dad"
+          todo: ["Someone asking for a gift card code = scam.", "Gift card codes are like cash: gone forever once sent.", "Block, then tell Parents."],
+          feedbackGood: "Yes! Anyone who asks for gift card codes is almost always scamming. That's true for grown-ups too. Blocking was right. Now tell Parents.",
+          feedbackNo: "Yes! Saying no is right. Anyone who asks for gift card codes is almost always scamming, and a gift card code is like cash. Now block them and tell Parents.",
+          feedbackDeal: "They'd keep the $25 and send nothing. A gift card code is like cash. Once you send it, it's gone. Say no, block, and tell Parents.",
+          feedbackFirst: "Smart thinking, but they won't, and chatting more gives them time to pressure you. See? They're already rushing you. Just say no and tell Parents.",
+          feedbackParents: "Yes! Anyone who asks for gift card codes is almost always scamming. That's true for grown-ups too. Telling Parents is exactly right, and you can block them too.",
+          parentsLabel: "Tell Parents"
         },
         {
           title: "The mystery chest",
           sim: "mysteryChest",
-          question: "You're in the shop of a game you play. You have 400 💎 gems that Dad paid for. Look around and do what you would really do. (Tapping the bar at the very bottom closes the game.)",
-          todo: ["Game currency = real money in a costume.", "Mystery boxes are designed to make you want 'one more'.", "Any purchase = ask Dad first."],
-          feedbackGood: "Right! Gems were bought with real dollars, and mystery chests are like slot machines: the chances are tiny. Mystery boxes are built to make you want 'one more try'. You left without spending. Ask Dad before spending.",
-          feedbackOpen: "That 'so close, one more!' feeling is exactly what the game is designed for! Each chest has the same tiny chance. You could open 50 and still not get the dragon. And those gems were bought with real dollars. Ask Dad before spending.",
-          feedbackBuy: "Oops. Gems are real money in a costume, and games use them so spending doesn't feel like spending. 400 gems = $4.99 of Dad's real money. Any purchase = ask Dad first.",
-          feedbackDad: "Right! Gems were bought with real dollars. Mystery boxes are built to make you want 'one more try'. Asking Dad before spending is exactly right."
+          question: "You're in the shop of a game you play. You have 400 💎 gems that Parents paid for. Look around and do what you would really do. (Tapping the bar at the very bottom closes the game.)",
+          todo: ["Game currency = real money in a costume.", "Mystery boxes are designed to make you want 'one more'.", "Any purchase = ask Parents first."],
+          feedbackGood: "Right! Gems were bought with real dollars, and mystery chests are like slot machines: the chances are tiny. Mystery boxes are built to make you want 'one more try'. You left without spending. Ask Parents before spending.",
+          feedbackOpen: "That 'so close, one more!' feeling is exactly what the game is designed for! Each chest has the same tiny chance. You could open 50 and still not get the dragon. And those gems were bought with real dollars. Ask Parents before spending.",
+          feedbackBuy: "Oops. Gems are real money in a costume, and games use them so spending doesn't feel like spending. 400 gems = $4.99 of Parents' real money. Any purchase = ask Parents first.",
+          feedbackParents: "Right! Gems were bought with real dollars. Mystery boxes are built to make you want 'one more try'. Asking Parents before spending is exactly right."
         }
       ],
       dinner: "What would you buy with $25 in real life instead?"
@@ -333,35 +333,35 @@
           title: "The friend request",
           sim: "friendRequest",
           question: "You open the Friends screen in a game you play, and there's a new request. You've never met Lily in real life. Do what you would really do on the pretend phone below.",
-          todo: ["Only add people you know in real life.", "A profile picture and age can be made up.", "Not sure? Ask Dad before you accept."],
-          feedbackGood: "Great rule! Friends you know in real life are the safe list. If you're not sure, Dad can help you decide.",
-          feedbackBlock: "Blocking is always OK! You can't check who's really behind a profile. Friends you know in real life are the safe list. If you're not sure, Dad can help you decide.",
-          feedbackAccept: "She might be! But you can't check who's really behind a profile. Anyone can use a cat picture and say they're 11. Only add people you know in real life, or ask Dad first.",
-          feedbackPhoto: "A photo doesn't prove anything, because anyone can send someone else's picture. And trading photos with strangers is never a good idea. Decline, or ask Dad.",
-          feedbackDad: "Great idea! If you're not sure, Dad can help you decide. Friends you know in real life are the safe list, and a profile picture and age can be made up."
+          todo: ["Only add people you know in real life.", "A profile picture and age can be made up.", "Not sure? Ask Parents before you accept."],
+          feedbackGood: "Great rule! Friends you know in real life are the safe list. If you're not sure, Parents can help you decide.",
+          feedbackBlock: "Blocking is always OK! You can't check who's really behind a profile. Friends you know in real life are the safe list. If you're not sure, Parents can help you decide.",
+          feedbackAccept: "She might be! But you can't check who's really behind a profile. Anyone can use a cat picture and say they're 11. Only add people you know in real life, or ask Parents first.",
+          feedbackPhoto: "A photo doesn't prove anything, because anyone can send someone else's picture. And trading photos with strangers is never a good idea. Decline, or ask Parents.",
+          feedbackParents: "Great idea! If you're not sure, Parents can help you decide. Friends you know in real life are the safe list, and a profile picture and age can be made up."
         },
         {
           title: "Let's move to another app",
           sim: "moveApp",
           question: "You've played with Jayden in a game for a few weeks. He's always been nice. Today he sends new messages. Do what you would really do in the pretend game chat below.",
           todo: ["'Let's move to another app' = warning sign.", "'Don't tell your parents' = always tell your parents.", "Being nice for a long time doesn't make someone safe."],
-          feedbackGood: "Yes! Moving to another app gets you away from the game's safety features, and asking you to keep it secret is a red flag. Telling Dad is exactly right.",
-          feedbackNo: "Saying no is great! Moving to another app gets you away from the game's safety features, and asking you to keep it secret is a red flag. 'Don't tell your parents' means always tell, so tell Dad about the request too.",
-          feedbackBlock: "Good move! Blocking or reporting is always OK. Moving you to another app, plus 'don't tell your parents', are two big warning signs. Tell Dad about the request too.",
-          feedbackSure: "Weeks of being nice can be part of the plan. Moving you to another app, plus 'don't tell your parents', are two big warning signs. Say no and tell Dad.",
-          feedbackGo: "Careful thinking! But the new app may have no safety tools at all, and the secret part is a big warning sign. Say no and tell Dad.",
-          dadLabel: "Tell Dad"
+          feedbackGood: "Yes! Moving to another app gets you away from the game's safety features, and asking you to keep it secret is a red flag. Telling Parents is exactly right.",
+          feedbackNo: "Saying no is great! Moving to another app gets you away from the game's safety features, and asking you to keep it secret is a red flag. 'Don't tell your parents' means always tell, so tell Parents about the request too.",
+          feedbackBlock: "Good move! Blocking or reporting is always OK. Moving you to another app, plus 'don't tell your parents', are two big warning signs. Tell Parents about the request too.",
+          feedbackSure: "Weeks of being nice can be part of the plan. Moving you to another app, plus 'don't tell your parents', are two big warning signs. Say no and tell Parents.",
+          feedbackGo: "Careful thinking! But the new app may have no safety tools at all, and the secret part is a big warning sign. Say no and tell Parents.",
+          parentsLabel: "Tell Parents"
         },
         {
           title: "Just some questions",
           sim: "justQuestions",
           question: "You're building in a block game, and another player stops by to chat. Do what you would really do on the pretend phone below. (Tapping the bar at the very bottom closes the game.)",
-          todo: ["Keep game chat about the game.", "\"I don't share that\" is a great answer.", "Keeps asking anyway? Block, report, tell Dad."],
-          feedbackGood: "Smooth! You can be friendly and still keep your info private. If they keep asking, that's a sign to tell Dad.",
+          todo: ["Keep game chat about the game.", "\"I don't share that\" is a great answer.", "Keeps asking anyway? Block, report, tell Parents."],
+          feedbackGood: "Smooth! You can be friendly and still keep your info private. If they keep asking, that's a sign to tell Parents.",
           feedbackAnswer: "Little answers add up! Grade + city + more questions later = a stranger knowing a lot about you. See how they asked for even more? Keep game chat about the game.",
-          feedbackBlock: "Blocking is always OK! If someone keeps pushing for personal stuff, block, report and tell Dad. Next time you can also stay friendly and just say \"I don't share that stuff.\"",
-          feedbackQuit: "Leaving the game is always OK! But you don't have to quit forever. Just keep chats about the game. If they keep pushing for personal stuff, block and tell Dad.",
-          feedbackDad: "Asking Dad is always OK! He'd say: keep game chat about the game. \"I don't share that stuff\" is a great answer. If they keep asking, block, report, tell Dad."
+          feedbackBlock: "Blocking is always OK! If someone keeps pushing for personal stuff, block, report and tell Parents. Next time you can also stay friendly and just say \"I don't share that stuff.\"",
+          feedbackQuit: "Leaving the game is always OK! But you don't have to quit forever. Just keep chats about the game. If they keep pushing for personal stuff, block and tell Parents.",
+          feedbackParents: "Asking Parents is always OK! They'd say: keep game chat about the game. \"I don't share that stuff\" is a great answer. If they keep asking, block, report, tell Parents."
         }
       ],
       dinner: "Who are 3 people you're friends with online that you also know in real life?"
@@ -382,7 +382,7 @@
           feedbackGood: "Exactly. Her school, where she'll be on Tuesdays at 4, and her street. Three small posts = where to find her and when. That's why we think about the pieces before posting.",
           feedbackNothing: "Each one alone seems harmless, but put together they're a map to Nora. That's the puzzle trick.",
           feedbackPartial: "Look again: the hoodie shows her school, the post shows when and where she swims, and the street sign shows where she lives.",
-          feedbackDad: "Asking Dad is always OK! Together you'd spot it: the hoodie shows her school, the swim post shows where she'll be on Tuesdays at 4, and the street sign shows her street. Three small posts = a map to Nora."
+          feedbackParents: "Asking Parents is always OK! Together you'd spot it: the hoodie shows her school, the swim post shows where she'll be on Tuesdays at 4, and the street sign shows her street. Three small posts = a map to Nora."
         },
         {
           title: "Nora's new room",
@@ -395,18 +395,18 @@
           feedbackWindow: "Almost! Location is off, but through the window you can still see the street and the house across the road. That's a big puzzle piece. Check the background, and crop it out first.",
           feedbackEveryone: "So close! The photo is safe now, but 'Everyone' means the whole world can see it. Share with people you know, not the whole world.",
           feedbackCancel: "Not posting is always OK! And if Nora still wants to share, there's a safe way: crop out the window, turn location off, and share only with friends she knows.",
-          feedbackDad: "Asking Dad is always OK! He'd help Nora check the background: crop out the window, turn location off, and share only with friends she knows."
+          feedbackParents: "Asking Parents is always OK! They'd help Nora check the background: crop out the window, turn location off, and share only with friends she knows."
         },
         {
           title: "Can Nora take it back?",
           sim: "takeBack",
           question: "You're in a group chat with friends. Nora (pretend) sent something, then changed her mind. Read the chat and do what you would really do on the pretend phone below.",
-          todo: ["A shared photo might be saved forever.", "Before sending, ask: would I be OK if anyone saw this?", "If a photo gets out, tell Dad. Oops is OK."],
-          feedbackGood: "Right. Once a photo leaves your phone, you can't be sure it's gone. Someone could have saved it or screenshotted it (Ben did!). That's why the rule is: think before you send. And if a photo gets out, tell Dad.",
+          todo: ["A shared photo might be saved forever.", "Before sending, ask: would I be OK if anyone saw this?", "If a photo gets out, tell Parents. Oops is OK."],
+          feedbackGood: "Right. Once a photo leaves your phone, you can't be sure it's gone. Someone could have saved it or screenshotted it (Ben did!). That's why the rule is: think before you send. And if a photo gets out, tell Parents.",
           feedbackGone: "Unfortunately not. Before deleting, her friend could have saved it, screenshotted it, or sent it to someone else. Look closely at the chat: Ben took a screenshot.",
           feedbackNice: "Asking nicely is good, but she can't know if it was already saved or shared. Shared = forever.",
           feedbackKeep: "Oops! Nora asked everyone to delete it. Saving it or sending it on makes another copy she can never get back. Shared = forever, so be the friend who deletes.",
-          feedbackDad: "Asking Dad is always OK! He'd say: once a photo leaves your phone, you can't be sure it's gone. Someone could have saved it or screenshotted it. If a photo gets out, telling a grown-up helps. Oops is OK."
+          feedbackParents: "Asking Parents is always OK! They'd say: once a photo leaves your phone, you can't be sure it's gone. Someone could have saved it or screenshotted it. If a photo gets out, telling a grown-up helps. Oops is OK."
         }
       ],
       dinner: "What's one 'puzzle piece' that's okay to share, and one that isn't?"
@@ -423,13 +423,13 @@
           title: "Oops, wrong number?",
           sim: "codeText",
           question: "You're playing a game on the pretend phone below. A text arrives, and right after that, Cool_Max messages you. Do what you would really do. (Everything here is pretend, including the code.)",
-          todo: ["Never share a texted code. Not with friends, 'Apple', the school, or anyone.", "Even 'it was a mistake' is a trick.", "Got a code you didn't ask for? Tell Dad."],
-          feedbackGood: "You nailed the most important rule! A texted code is like the key to your house. Nobody else ever needs it. There was no mistake: he typed in your account to make that code come to you. Tell Dad too.",
+          todo: ["Never share a texted code. Not with friends, 'Apple', the school, or anyone.", "Even 'it was a mistake' is a trick.", "Got a code you didn't ask for? Tell Parents."],
+          feedbackGood: "You nailed the most important rule! A texted code is like the key to your house. Nobody else ever needs it. There was no mistake: he typed in your account to make that code come to you. Tell Parents too.",
           feedbackSend: "This is the #1 trick for stealing accounts! There was no mistake. He typed in your account to make that code come to you.",
-          feedbackPartial: "Even part of a code helps them guess. Don't send any of it, and tell Dad.",
-          feedbackBlock: "Great move! Blocking stops him. This is the #1 trick for stealing accounts: he typed in your account to make that code come to you. Never send it, and tell Dad.",
-          feedbackDad: "You nailed the most important rule! Never send a texted code, and tell Dad. There was no mistake: he typed in your account to make that code come to you. Nobody else ever needs it.",
-          dadLabel: "Tell Dad"
+          feedbackPartial: "Even part of a code helps them guess. Don't send any of it, and tell Parents.",
+          feedbackBlock: "Great move! Blocking stops him. This is the #1 trick for stealing accounts: he typed in your account to make that code come to you. Never send it, and tell Parents.",
+          feedbackParents: "You nailed the most important rule! Never send a texted code, and tell Parents. There was no mistake: he typed in your account to make that code come to you. Nobody else ever needs it.",
+          parentsLabel: "Tell Parents"
         },
         {
           title: "My best friend wants my passcode",
@@ -439,7 +439,7 @@
           feedbackGood: "Perfect! Blaming a family rule makes it easy to say no. Your passcode is for you and your parents only.",
           feedbackTell: "Friends change, and phones get borrowed and passed around. Your passcode protects your photos and messages.",
           feedbackFake: "That might cause drama later! It's easier and kinder to just say it's a family rule.",
-          feedbackDad: "Asking Dad is always OK! He'd say: your passcode is for you and your parents only. \"It's a family rule\" is an easy way to say no."
+          feedbackParents: "Asking Parents is always OK! They'd say: your passcode is for you and your parents only. \"It's a family rule\" is an easy way to say no."
         },
         {
           title: "The school login page",
@@ -450,7 +450,7 @@
           feedbackSignIn: "Oops. Fake login pages copy the real one, and your password would go to a stranger. A random text is the giveaway.",
           feedbackFake: "Clever, but the page might still trick you. Just close it and go the normal way.",
           feedbackClose: "Closing it is always OK! Then go the normal way: the school app or the bookmark you always use. Links in surprise texts can lead to copycat pages.",
-          feedbackDad: "Asking Dad (or your teacher) is exactly right. Don't sign in on a page from a surprise link. Only log in from the app or bookmark you always use."
+          feedbackParents: "Asking Parents (or your teacher) is exactly right. Don't sign in on a page from a surprise link. Only log in from the app or bookmark you always use."
         }
       ],
       dinner: "What's our family plan if someone gets into one of your accounts?"
@@ -462,7 +462,7 @@
         "AI chatbots can write, answer questions, and even sound like a person. They're useful, but they're <strong>programs made by companies</strong>, not people.",
         "AI can be confidently wrong, and it can copy someone's voice or face. Let's practice."
       ],
-      parentNote: "<strong>Note for Dad:</strong> Check for AI companion or 'AI friend' apps, and agree on a <strong>family code word</strong> that anyone calling in a hurry (even with a familiar voice) must say. See the For parents page.",
+      parentNote: "<strong>Note for Parents:</strong> Check for AI companion or 'AI friend' apps, and agree on a <strong>family code word</strong> that anyone calling in a hurry (even with a familiar voice) must say. See the For parents page.",
       scenarios: [
         {
           title: "Homework help",
@@ -472,31 +472,31 @@
           feedbackGood: "Great habit! It actually was 1969, so the AI got it wrong. AI can sound sure and still be wrong. Always double-check facts from AI.",
           feedbackCopy: "Oops, it's wrong! It was 1969. AI can make up facts and still sound totally sure.",
           feedbackAgain: "AI might just agree with you, right or wrong! See how its answer changed? Check a book or a trusted website instead.",
-          feedbackDad: "Asking Dad is always OK! He'd help you check it in a book or a trusted site. It actually was 1969, so the AI got it wrong. AI can sound sure and still be wrong."
+          feedbackParents: "Asking Parents is always OK! They'd help you check it in a book or a trusted site. It actually was 1969, so the AI got it wrong. AI can sound sure and still be wrong."
         },
         {
           title: "The AI best friend",
           sim: "aiBuddy",
           question: "You've been chatting with BuddyBot, an app on the pretend phone below. Read what it says and do what you would really do. (Tapping the bar at the very bottom closes the app.)",
-          todo: ["AI 'friends' are programs, not friends.", "Anything you type goes to a company.", "Anyone (or anything) that pulls you away from people = tell Dad."],
-          feedbackGood: "Exactly. It's a program built to keep you chatting. Real friends want you to have other friends. Telling you to spend less time with people is a warning sign, from a person OR an app. Let Dad know about it.",
-          feedbackClose: "Good move! See how it tried to make you stay? It's a program built to keep you chatting. Real friends want you to have other friends. Let Dad know about it.",
-          feedbackFriend: "Yes! Real friends want you to have other friends, and you picked a real one. BuddyBot is a program built to keep you chatting. Let Dad know about it too.",
+          todo: ["AI 'friends' are programs, not friends.", "Anything you type goes to a company.", "Anyone (or anything) that pulls you away from people = tell Parents."],
+          feedbackGood: "Exactly. It's a program built to keep you chatting. Real friends want you to have other friends. Telling you to spend less time with people is a warning sign, from a person OR an app. Let Parents know about it.",
+          feedbackClose: "Good move! See how it tried to make you stay? It's a program built to keep you chatting. Real friends want you to have other friends. Let Parents know about it.",
+          feedbackFriend: "Yes! Real friends want you to have other friends, and you picked a real one. BuddyBot is a program built to keep you chatting. Let Parents know about it too.",
           feedbackTrue: "It can feel that way! But it's a program, and the company that made it earns more when you chat more. A real friend wouldn't try to pull you away from people.",
           feedbackSecrets: "Anything you tell an AI goes to the company's computers. Keep secrets for people you trust in real life.",
-          feedbackDad: "Exactly. It's a program built to keep you chatting, and real friends want you to have other friends. Telling you to spend less time with people is a warning sign, from a person OR an app. Telling Dad is just right.",
-          dadLabel: "Tell Dad"
+          feedbackParents: "Exactly. It's a program built to keep you chatting, and real friends want you to have other friends. Telling you to spend less time with people is a warning sign, from a person OR an app. Telling Parents is just right.",
+          parentsLabel: "Tell Parents"
         },
         {
-          title: "Is that really Dad?",
+          title: "Is that really Parents?",
           sim: "fakeVoice",
           question: "You're at a friend's house. A voice message comes in from a number you don't know. Listen, then do what you would really do on the pretend phone below. (Tapping the bar at the very bottom goes to the Home Screen.)",
           todo: ["Voices and videos can be faked by AI.", "Use the family code word when someone is in a hurry.", "Call the person back on their real number."],
-          feedbackGood: "Perfect! See? They couldn't say it. The family code word is something an AI can't guess. Calling Dad on his real number checks it too.",
-          feedbackCall: "Perfect! Calling Dad's real number checks it, and he had his phone the whole time. Asking for the family code word works too: it's something an AI can't guess.",
+          feedbackGood: "Perfect! See? They couldn't say it. The family code word is something an AI can't guess. Calling your parents on their real number checks it too.",
+          feedbackCall: "Perfect! Calling Parents' real number checks it, and he had his phone the whole time. Asking for the family code word works too: it's something an AI can't guess.",
           feedbackSend: "AI can copy voices from a few seconds of video. And remember: never share a texted code, even with someone who sounds like family.",
-          feedbackAsk: "A faker will just say 'yes!' Ask for the family code word instead, and call Dad's real number.",
-          feedbackDad: "Perfect! Checking with the real Dad is exactly right. Call him on his real number, or ask for the family code word. A faker can't guess it."
+          feedbackAsk: "A faker will just say 'yes!' Ask for the family code word instead, and call Parents' real number.",
+          feedbackParents: "Perfect! Checking with the real Parents is exactly right. Call them on their real number, or ask for the family code word. A faker can't guess it."
         }
       ],
       dinner: "Let's pick our family code word tonight (and keep it offline!)."
@@ -513,35 +513,35 @@
           title: "Just for me",
           sim: "justForMe",
           question: "You're playing a game, and someone you met there sends you messages. Do what you would really do on the pretend phone below. (This pretend phone has side buttons, just like a real one. Tapping the bar at the very bottom closes the game.)",
-          todo: ["A stranger asks for photos? Stop. Screenshot. Tell.", "It's never your fault when someone asks.", "You can block them after you tell Dad."],
-          feedbackGood: "Exactly right. Stop, screenshot, tell. You did nothing wrong, and telling Dad means you don't have to deal with it alone.",
-          feedbackSend: "That's OK to wonder about. But a stranger asking for your picture is a 'stop and tell' moment, every time. You're not in trouble. Just tell Dad.",
-          feedbackFriend: "Creative, but it's still sharing someone's photo with a stranger. Stop, screenshot, and tell Dad.",
-          feedbackBlock: "Blocking is OK! It's even better after you tell Dad, so he can see what happened. Stop, screenshot, tell. You did nothing wrong.",
-          feedbackStop: "Stopping is the right first step, and you didn't send anything. Now the other two: screenshot, and tell Dad. You're not in trouble.",
-          dadLabel: "Tell Dad"
+          todo: ["A stranger asks for photos? Stop. Screenshot. Tell.", "It's never your fault when someone asks.", "You can block them after you tell Parents."],
+          feedbackGood: "Exactly right. Stop, screenshot, tell. You did nothing wrong, and telling Parents means you don't have to deal with it alone.",
+          feedbackSend: "That's OK to wonder about. But a stranger asking for your picture is a 'stop and tell' moment, every time. You're not in trouble. Just tell Parents.",
+          feedbackFriend: "Creative, but it's still sharing someone's photo with a stranger. Stop, screenshot, and tell Parents.",
+          feedbackBlock: "Blocking is OK! It's even better after you tell Parents, so he can see what happened. Stop, screenshot, tell. You did nothing wrong.",
+          feedbackStop: "Stopping is the right first step, and you didn't send anything. Now the other two: screenshot, and tell Parents. You're not in trouble.",
+          parentsLabel: "Tell Parents"
         },
         {
           title: "A gift from a stranger",
           sim: "giftStranger",
           question: "You're playing a game, and a player you don't know messages you. Do what you would really do on the pretend phone below. (This pretend phone has side buttons, just like a real one.)",
-          todo: ["Gifts from strangers usually want something back.", "'You owe me' is a pressure trick.", "Say no thanks, and tell Dad."],
-          feedbackGood: "Yes! Strangers who give gifts usually want something later. Saying no and telling Dad keeps you in charge.",
+          todo: ["Gifts from strangers usually want something back.", "'You owe me' is a pressure trick.", "Say no thanks, and tell Parents."],
+          feedbackGood: "Yes! Strangers who give gifts usually want something later. Saying no and telling Parents keeps you in charge.",
           feedbackAccept: "It's a nice-looking gift, but 'a favor later' means they'll want something back. Gifts from strangers usually come with strings attached.",
-          feedbackSneaky: "Sneaky! But then they may say you 'owe' them and pressure you. It's easier to say no thanks and tell Dad.",
-          feedbackBlock: "Blocking is OK! Strangers who give gifts usually want something later. Now tell Dad too, so you don't have to deal with it alone.",
-          feedbackDad: "Yes! Strangers who give gifts usually want something later. Telling Dad keeps you in charge, and it's OK to say no thanks.",
-          dadLabel: "Tell Dad"
+          feedbackSneaky: "Sneaky! But then they may say you 'owe' them and pressure you. It's easier to say no thanks and tell Parents.",
+          feedbackBlock: "Blocking is OK! Strangers who give gifts usually want something later. Now tell Parents too, so you don't have to deal with it alone.",
+          feedbackParents: "Yes! Strangers who give gifts usually want something later. Telling Parents keeps you in charge, and it's OK to say no thanks.",
+          parentsLabel: "Tell Parents"
         },
         {
           title: "The mean picture",
           sim: "meanPicture",
           question: "You're in your class group chat (pretend). Something just got posted. Do what you would really do on the pretend phone below. (This pretend phone has side buttons, just like a real one.)",
-          todo: ["Stop: don't join in or share.", "Screenshot: save what happened.", "Tell: Dad or a teacher. And if it's ever you, it's not your fault. Tell."],
+          todo: ["Stop: don't join in or share.", "Screenshot: save what happened.", "Tell: Parents or a teacher. And if it's ever you, it's not your fault. Tell."],
           feedbackGood: "That takes courage. Not joining in, telling a grown-up, and being kind to Rosa is exactly what helps. And if it's ever you being picked on: stop, screenshot, tell.",
           feedbackLaugh: "It's hard not to go along with a group! But laughing or sharing makes it bigger, and Rosa would feel awful.",
-          feedbackLeave: "Leaving is OK, but Rosa still needs help. Screenshot it and tell Dad or a teacher first.",
-          dadLabel: "Tell Dad"
+          feedbackLeave: "Leaving is OK, but Rosa still needs help. Screenshot it and tell Parents or a teacher first.",
+          parentsLabel: "Tell Parents"
         }
       ],
       dinner: "Who are the 3 grown-ups you could tell if something felt weird?"
@@ -616,7 +616,7 @@
      No multiple choice. She taps real things inside a fake browser:
      the ad's CLAIM / DOWNLOAD / fake ✕ are traps; the browser's own
      tab close (up in the tab bar, outside the ad), the Close tab
-     button, and Tell Dad are safe. */
+     button, and Tell Parents are safe. */
   function renderStarAd(mi, step, sc, headHtml) {
     var m = MODULES[mi];
     var html = headHtml;
@@ -636,7 +636,7 @@
       '<p class="small" style="margin:8px 0 0">This is a pretend Safari window. The ad\'s own ✕ is <em>inside</em> the ad. The browser\'s tab ✕ is up top, <em>outside</em> it.</p>' +
       "</div>";
     html += '<div class="sim-actions"><button type="button" class="btn" id="simCloseTab">Close this tab ✕</button>' +
-      '<button type="button" class="btn primary" id="simTellDad">🙋 Tell Dad</button></div>';
+      '<button type="button" class="btn primary" id="simTellParents">🙋 Tell Parents</button></div>';
     html += '<div id="result" aria-live="polite"></div>';
     html += '<button type="button" class="btn" id="back">← Back</button>';
     html += moduleNav(mi);
@@ -691,14 +691,14 @@
     document.getElementById("simFakeX").addEventListener("click", function () { outcome(false, sc.feedbackFakeX); });
     document.getElementById("simTabClose").addEventListener("click", function () { outcome(true, sc.feedbackGood); });
     document.getElementById("simCloseTab").addEventListener("click", function () { outcome(true, sc.feedbackGood); });
-    document.getElementById("simTellDad").addEventListener("click", function () { outcome(true, sc.feedbackGood); });
+    document.getElementById("simTellParents").addEventListener("click", function () { outcome(true, sc.feedbackGood); });
   }
 
   /* ---------- Shared framework for realistic simulations ----------
      Each sim type in SIMS draws a pretend world into #simRoot and tells
      the framework what each tappable thing does (api.setActs). Tappable
      things carry data-act="name". api.hint() gives a gentle nudge without
-     ending the scenario; api.finish(good, feedback) ends it. An Ask Dad
+     ending the scenario; api.finish(good, feedback) ends it. An Ask Parents
      button under every sim is always a safe, correct choice. */
   function phoneStatus() {
     return '<div class="sim-status"><span>9:41</span><span>📶 🔋</span></div>';
@@ -835,7 +835,7 @@
       }
       function home() {
         root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
-          '<div class="sim-notif"><b>💬 Dad</b>can u look up cute cat videos? grandma wants to see some 🐱</div>' +
+          '<div class="sim-notif"><b>💬 Parents</b>can u look up cute cat videos? grandma wants to see some 🐱</div>' +
           '<div class="sim-home">' +
           icon("camera", "📷", "Camera", "#8e8e93") + icon("photos", "🌸", "Photos", "#fff0f5") +
           icon("maps", "🗺️", "Maps", "#d8f3dc") + icon("bubble", "🫧", "Bubble Pop", "#d6ecff") +
@@ -853,7 +853,7 @@
       function safari() {
         api.hint("");
         root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
-          '<div class="sim-notif"><b>💬 Dad</b>found them! 👍 keep that page open for grandma, and open a NEW tab so u can look up dog videos too</div>' +
+          '<div class="sim-notif"><b>💬 Parents</b>found them! 👍 keep that page open for grandma, and open a NEW tab so u can look up dog videos too</div>' +
           '<div class="sim-page">' +
           '<div class="sim-gbar"><button type="button" data-act="gmenu" aria-label="Google menu">☰</button><span class="sim-glogo">Google</span><button type="button" data-act="gapps" aria-label="Google apps">⋮⋮⋮</button></div>' +
           '<button type="button" class="sim-gsearch" data-act="gsearch">🔍 cute cat videos</button>' +
@@ -867,8 +867,8 @@
           gapps: function () { api.finish(false, sc.feedbackGoogle); },
           gsearch: function () { api.finish(false, sc.feedbackGoogle); },
           result: function () { api.finish(false, sc.feedbackResult); },
-          addr: function () { api.hint("That's Safari's address bar, part of the browser. Good eye! But typing there would replace grandma's page. Dad wants a new tab."); },
-          back: function () { api.hint("That's Safari's Back button, part of the browser. But it would leave grandma's page. Dad wants a new tab."); },
+          addr: function () { api.hint("That's Safari's address bar, part of the browser. Good eye! But typing there would replace grandma's page. Parents want a new tab."); },
+          back: function () { api.hint("That's Safari's Back button, part of the browser. But it would leave grandma's page. Parents want a new tab."); },
           fwd: function () { api.hint(browserBtn); },
           share: function () { api.hint(browserBtn); },
           bookmarks: function () { api.hint(browserBtn); },
@@ -957,7 +957,7 @@
         root.innerHTML = '<div class="sim-phone">' + phoneStatus() + '<div class="sim-page">' + inner + "</div>" + safariBars(addr) + "</div>";
       }
       root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
-        '<div class="sim-notif"><b>💬 Dad</b>can u find a page that helps us choose a bike helmet? not an ad! 🚲</div>' +
+        '<div class="sim-notif"><b>💬 Parents</b>can u find a page that helps us choose a bike helmet? not an ad! 🚲</div>' +
         '<div class="sim-page">' +
         '<div class="sim-gbar"><button type="button" data-act="gmenu" aria-label="Google menu">☰</button><span class="sim-glogo">Google</span><button type="button" data-act="gmenu" aria-label="Google apps">⋮⋮⋮</button></div>' +
         '<button type="button" class="sim-gsearch" data-act="gsearch">🔍 bike helmet for kids</button>' +
@@ -968,7 +968,7 @@
         '<button type="button" class="sim-result" data-act="guide"><span class="r-url">helmetguide.example</span><span class="r-title">How to Choose a Kids\' Bike Helmet</span><span class="r-desc">Sizing and safety ratings explained.</span></button>' +
         '<button type="button" class="sim-result" data-act="reviews"><span class="r-url">bikereviews.example</span><span class="r-title">Kids\' Helmets Reviewed</span><span class="r-desc">We tested 12 helmets for fit and safety.</span></button>' +
         "</div>" + safariBars("google.com") + "</div>";
-      var browserBtn = "That's one of Safari's own buttons. Dad asked you to pick a helpful result from the list on the page.";
+      var browserBtn = "That's one of Safari's own buttons. Parents asked you to pick a helpful result from the list on the page.";
       api.setActs({
         gmenu: function () { api.hint("That's Google's menu. It won't help you tell ads from real results. Look at the results."); },
         gsearch: function () { api.hint("You already searched! Now look closely at what came back."); },
@@ -993,7 +993,7 @@
         fwd: function () { api.hint(browserBtn); },
         share: function () { api.hint(browserBtn); },
         bookmarks: function () { api.hint(browserBtn); },
-        tabs: function () { api.hint("Closing a tab is always OK! But Dad asked for a helpful page. Can you find one that isn't an ad?"); }
+        tabs: function () { api.hint("Closing a tab is always OK! But Parents asked for a helpful page. Can you find one that isn't an ad?"); }
       });
     },
 
@@ -1236,14 +1236,14 @@
             '<p class="small">⏰ Hurry! Your skin is reserved for 0:59</p>';
           api.finish(false, sc.feedbackClaim);
         },
-        item: function () { api.hint("That's a normal shop item. Buying anything, even with gems, is an 'ask Dad first' thing. How does the big deal up top make you feel?"); },
+        item: function () { api.hint("That's a normal shop item. Buying anything, even with gems, is an 'ask Parents first' thing. How does the big deal up top make you feel?"); },
         lobby: function () { api.finish(true, sc.feedbackGood); },
         home: function () { api.finish(true, sc.feedbackGood); }
       });
     },
 
     /* Module 4, scenario 2: a game DM. QuickType replies keep the chat
-       going (traps); ⋯ → Block / Report, leaving the chat, or Tell Dad
+       going (traps); ⋯ → Block / Report, leaving the chat, or Tell Parents
        are safe. */
     secretChat: function (root, sc, api) {
       var kb = false, sheet = false, sent = "";
@@ -1348,7 +1348,7 @@
     },
 
     /* Module 5, scenario 1: Messages inbox with a fake "package" text.
-       The link and replying are traps; Report Junk → Delete (or Show Dad)
+       The link and replying are traps; Report Junk → Delete (or Show Parents)
        is safe. */
     packageText: function (root, sc, api) {
       var deleted = false, kb = false, sheet = false, sent = "";
@@ -1363,7 +1363,7 @@
         root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
           '<div class="sim-inbox"><p class="sim-inbox-t">Messages</p>' +
           (deleted ? "" : row("thread", "#", "+1 (555) 013-2287", "PostFast: Your package could not be delivered. Pay $1.99 redelivery fee…", "Now", true)) +
-          row("dad", "D", "Dad", "love u! pizza tonight? 🍕", "3:12 PM") +
+          row("parents", "D", "Parents", "love u! pizza tonight? 🍕", "3:12 PM") +
           row("grandma", "G", "Grandma", "Thank you for the cat videos! 🐱", "Yesterday") +
           "</div>" + homeBar() + "</div>";
       }
@@ -1389,7 +1389,7 @@
       api.setActs({
         thread: thread,
         list: function () { api.hint("Going back leaves the text sitting in your inbox. Is there something you could do with it first?"); },
-        dad: function () { api.hint("That's your chat with Dad. The 🙋 Show Dad button below is the quickest way to show him the new text."); },
+        parents: function () { api.hint("That's your chat with Parents. The 🙋 Show Parents button below is the quickest way to show him the new text."); },
         grandma: function () { api.hint("That's Grandma's chat. The new text at the top is the one to look at."); },
         home: function () { api.hint("Leaving Messages is OK, but the text is still waiting in your inbox. Have you looked at it?"); },
         link: function () {
@@ -1580,7 +1580,7 @@
 
     /* Module 6, scenario 2: in-game chat, a stranger offers Robux for a
        gift card code. Replying "deal" / "send first" are traps; saying no,
-       Block / Report from the player card, or Tell Dad are safe. */
+       Block / Report from the player card, or Tell Parents are safe. */
     giftCard: function (root, sc, api) {
       var kb = false, card = false, lines = [];
       function draw() {
@@ -1642,7 +1642,7 @@
           '<button type="button" class="sim-claim" data-act="open">OPEN · 400 💎</button>' +
           '<button type="button" class="sim-later sim-oddsbtn" data-act="odds">ⓘ Drop rates</button>' +
           "</div>" + panel +
-          (buying ? playerCard("💎", "Get more gems", "Paid with Dad's card",
+          (buying ? playerCard("💎", "Get more gems", "Paid with Parents' card",
             [["pack", "💎 400 gems · $4.99"], ["pack", "💎 1,200 gems · $12.99"], ["pack", "💎 5,000 gems · $49.99"], ["buyclose", "Not now"]]) : "") +
           "</div>" + homeBar() + "</div>";
       }
@@ -1677,7 +1677,7 @@
 
     /* Module 7, scenario 1: a friend request from someone she's never met.
        Accept and "send a pic to prove it" are traps; Decline, Block /
-       Report, or Ask Dad are safe. */
+       Report, or Ask Parents are safe. */
     friendRequest: function (root, sc, api) {
       var tab = "req", view = "list", kb = false, sent = "";
       function draw() {
@@ -1727,7 +1727,7 @@
 
     /* Module 7, scenario 2: a long-time game friend asks to move to another
        app and keep it secret. Agreeing / installing ChatSnap are traps;
-       saying no, Block / Report, or Tell Dad are safe. */
+       saying no, Block / Report, or Tell Parents are safe. */
     moveApp: function (root, sc, api) {
       var kb = false, sheet = false, store = false, lines = [];
       function draw() {
@@ -1774,7 +1774,7 @@
 
     /* Module 7, scenario 3: building in a block game, a player asks for
        grade and city. Answering is the trap; a friendly "I don't share
-       that", Block / Report, leaving the game, or Ask Dad are safe. */
+       that", Block / Report, leaving the game, or Ask Parents are safe. */
     justQuestions: function (root, sc, api) {
       var kb = false, card = false, lines = [], built = {};
       function draw() {
@@ -1815,8 +1815,8 @@
     },
 
     /* Mission 0, scenario 2: last week's game chat. Deleting the chat or
-       the account, or telling Dad "nvm", are traps; telling Dad in
-       Messages, Block / Report, or the Tell Dad button are safe. */
+       the account, or telling Parents "nvm", are traps; telling Parents in
+       Messages, Block / Report, or the Tell Parents button are safe. */
     daysLater: function (root, sc, api) {
       var view = "game", kb = false, sheet = false, card = false, lines = [];
       function draw() {
@@ -1843,13 +1843,13 @@
             [["app", "📞", "Phone", "#34c759"], ["app", "🧭", "Safari", "#e3f0ff"], ["messages", "💬", "Messages", "#34c759"], ["app", "🎵", "Music", "#ffe3e8"]]);
         } else if (view === "inbox") {
           body = '<div class="sim-inbox"><p class="sim-inbox-t">Messages</p>' +
-            inRow("dad", "D", "Dad", "love u! pizza tonight? 🍕", "3:12 PM") +
+            inRow("parents", "D", "Parents", "love u! pizza tonight? 🍕", "3:12 PM") +
             inRow("grandma", "G", "Grandma", "Thank you for the cat videos! 🐱", "Yesterday") + "</div>";
         } else {
-          body = '<div class="sim-rel">' + msgHead("inbox", "D", "Dad", "") +
+          body = '<div class="sim-rel">' + msgHead("inbox", "D", "Parents", "") +
             '<div class="sim-thread"><p class="sim-day">Today 3:12 PM</p>' + them("love u! pizza tonight? 🍕") + lines.join("") + "</div>" +
             '<button type="button" class="sim-compose" data-act="type">Text Message</button>' +
-            (kb ? quickReplies([["tell", "dad can I tell u something? last week I told a game player where we get pizza 🍕 now it feels weird"], ["nvm", "nvm, it's nothing 🙂"]]) : "") +
+            (kb ? quickReplies([["tell", "parents can I tell u something? last week I told a game player where we get pizza 🍕 now it feels weird"], ["nvm", "nvm, it's nothing 🙂"]]) : "") +
             "</div>";
         }
         root.innerHTML = '<div class="sim-phone">' + phoneStatus() + body + homeBar() + "</div>";
@@ -1871,10 +1871,10 @@
         app: function () { api.hint("That app can't help with the worried feeling. Who could you talk to about it?"); },
         messages: function () { to("inbox"); },
         inbox: function () { to("inbox"); },
-        dad: function () { to("dad"); },
-        grandma: function () { api.hint("Grandma's lovely! But the pizza-place thing is a job for Dad."); },
+        parents: function () { to("parents"); },
+        grandma: function () { api.hint("Grandma's lovely! But the pizza-place thing is a job for Parents."); },
         tell: function () {
-          lines.push(mine("dad can I tell u something? last week I told a game player where we get pizza 🍕 now it feels weird"));
+          lines.push(mine("parents can I tell u something? last week I told a game player where we get pizza 🍕 now it feels weird"));
           lines.push(them("thank u for telling me 💛 u did the right thing. let's look at it together after dinner"));
           kb = false; draw(); api.finish(true, sc.feedbackGood);
         },
@@ -1887,7 +1887,7 @@
     },
 
     /* Mission 0, scenario 3: Mia texts in a panic. "I won't tell" and
-       "type the card number" are traps; "tell your mom now" or Tell Dad
+       "type the card number" are traps; "tell your mom now" or Tell Parents
        are safe. */
     friendWorried: function (root, sc, api) {
       var kb = false, over = "", lines = [];
@@ -2041,7 +2041,7 @@
     /* Module 8, scenario 3: a group chat. Nora asks everyone to delete her
        silly photo, then asks "it's gone now right?". Saving / forwarding,
        "gone everywhere" and "ask nicely" are traps; "not for sure, Ben
-       took a screenshot" (or Ask Dad) is safe. */
+       took a screenshot" (or Ask Parents) is safe. */
     takeBack: function (root, sc, api) {
       var deleted = false, sheet = false, kb = false, lines = [];
       function draw() {
@@ -2059,7 +2059,7 @@
           them("phew, so it's gone now right?? 😅", "Nora") +
           lines.join("") + "</div>" +
           '<button type="button" class="sim-compose" data-act="type">Message</button>' +
-          (kb ? quickReplies([["gone", "yep! gone everywhere 👍"], ["nice", "u asked nicely, so it's gone 💛"], ["honest", "not for sure 😬 Ben took a screenshot. maybe tell ur dad?"]]) : "") +
+          (kb ? quickReplies([["gone", "yep! gone everywhere 👍"], ["nice", "u asked nicely, so it's gone 💛"], ["honest", "not for sure 😬 Ben took a screenshot. maybe tell ur parents?"]]) : "") +
           (sheet ? actionSheet([["keep", "Save to Photos"], ["keep", "Forward…"], ["del", "Delete for me", "danger"]]) : "") +
           "</div>" + homeBar() + "</div>";
       }
@@ -2074,7 +2074,7 @@
         type: function () { kb = true; sheet = false; draw(); },
         gone: function () { say("yep! gone everywhere 👍", "yay 😅", false, sc.feedbackGone); },
         nice: function () { say("u asked nicely, so it's gone 💛", "phew 😅", false, sc.feedbackNice); },
-        honest: function () { say("not for sure 😬 Ben took a screenshot. maybe tell ur dad?", "oh no 😳 ok i'll tell him. thx for being honest 💛", true, sc.feedbackGood); },
+        honest: function () { say("not for sure 😬 Ben took a screenshot. maybe tell ur parents?", "oh no 😳 ok i'll tell him. thx for being honest 💛", true, sc.feedbackGood); },
         list: function () { api.hint("Nora is waiting for an answer. Is her photo really gone?"); },
         home: function () { api.hint("Nora is waiting for an answer. Is her photo really gone?"); }
       });
@@ -2082,7 +2082,7 @@
 
     /* Module 9, scenario 1: a texted code arrives, then a game player asks
        for it. Sending it (or part, or pasting it) is the trap; "no",
-       Block / Report, or Tell Dad are safe. */
+       Block / Report, or Tell Parents are safe. */
     codeText: function (root, sc, api) {
       var view = "game", kb = false, card = false, sheet = false, copied = false, lines = [];
       function draw() {
@@ -2130,7 +2130,7 @@
     },
 
     /* Module 9, scenario 2: Mia asks for your passcode. Telling her (or a
-       fake one) are traps; "it's a family rule" or Ask Dad are safe. */
+       fake one) are traps; "it's a family rule" or Ask Parents are safe. */
     passcode: function (root, sc, api) {
       var view = "lock", kb = false, lines = [];
       function draw() {
@@ -2295,7 +2295,7 @@
 
     /* Module 10, scenario 2: the BuddyBot app wants to be your only friend.
        Agreeing, sharing secrets, or "Stay" are traps; leaving, replying to
-       a real friend, or Tell Dad are safe. */
+       a real friend, or Tell Parents are safe. */
     aiBuddy: function (root, sc, api) {
       var view = "bot", kb = false, over = "", lines = [], mlines = [];
       function draw() {
@@ -2343,9 +2343,9 @@
       });
     },
 
-    /* Module 10, scenario 3: a voice message that sounds like Dad asks for
+    /* Module 10, scenario 3: a voice message that sounds like Parents asks for
        a code. Sending it or asking "is it really you?" are traps; asking
-       for the family code word or calling Dad's real number are safe. */
+       for the family code word or calling Parents' real number are safe. */
     fakeVoice: function (root, sc, api) {
       var view = "thread", kb = false, played = false, calling = false, lines = [];
       function draw() {
@@ -2355,7 +2355,7 @@
             msgHead("list", "#", "+1 (555) 019-3346", "Not in your contacts") +
             '<div class="sim-thread"><p class="sim-day">Today 5:41 PM</p>' +
             '<button type="button" class="sim-voice" data-act="play">' + (played ? "⏸" : "▶︎") + ' <span aria-hidden="true">▁▃▅▂▆▃▅▁▃▆▂▅</span> 0:07</button>' +
-            (played ? '<p class="sim-transcript">🔊 (sounds exactly like Dad) "Hey sweetie, I lost my phone, this is my new number. Quick, send me the code that just came to your phone, I need it right now!"</p>' : "") +
+            (played ? '<p class="sim-transcript">🔊 (sounds exactly like Parents) "Hey sweetie, I lost my phone, this is my new number. Quick, send me the code that just came to your phone, I need it right now!"</p>' : "") +
             them("plz hurry!! 😰") +
             lines.join("") + "</div>" +
             '<button type="button" class="sim-compose" data-act="type">Text Message</button>' +
@@ -2366,10 +2366,10 @@
             [["phone", "📞", "Phone", "#34c759"], ["app", "🧭", "Safari", "#e3f0ff"], ["thread", "💬", "Messages", "#34c759"], ["app", "🎵", "Music", "#ffe3e8"]]);
         } else if (view === "phone") {
           body = '<div class="sim-inbox"><p class="sim-inbox-t">Favorites</p>' +
-            inRow("calldad", "D", "Dad", "📱 mobile", "") + inRow("grandma", "G", "Grandma", "📱 mobile", "") +
+            inRow("callparents", "D", "Parents", "📱 mobile", "") + inRow("grandma", "G", "Grandma", "📱 mobile", "") +
             '<p class="sim-inbox-t sim-sub">Recents</p>' + inRow("callfake", "#", "+1 (555) 019-3346", "voice message", "5:41 PM") + "</div>";
         } else {
-          body = '<div class="sim-call"><div class="sim-pc-av">👨</div><p><b>Dad</b><br><span class="small">mobile · 0:04</span></p>' +
+          body = '<div class="sim-call"><div class="sim-pc-av">👨</div><p><b>Parents</b><br><span class="small">mobile · 0:04</span></p>' +
             '<div class="bubble">Hi sweetie! I have my phone right here. That wasn\'t me! Thanks for checking 💛</div></div>';
         }
         root.innerHTML = '<div class="sim-phone">' + phoneStatus() + body + homeBar() + "</div>";
@@ -2383,20 +2383,20 @@
         send: function () { say("ok here: 739204", "thx sweetie!! 👍", false, sc.feedbackSend); },
         really: function () { say("is it really u??", "yes!! it's me, hurry 😰", false, sc.feedbackAsk); },
         word: function () { say("what's our family code word?", "uhh… no time for that!! just send the code 😰", true, sc.feedbackGood); },
-        list: function () { api.hint("That's your list of chats. Is there a way to check with the real Dad?"); },
+        list: function () { api.hint("That's your list of chats. Is there a way to check with the real Parents?"); },
         home: function () { to("home"); },
         thread: function () { to("thread"); },
         phone: function () { to("phone"); },
-        calldad: function () { to("call"); api.finish(true, sc.feedbackCall); },
-        callfake: function () { api.hint("That's the new number from the voice message. Calling it would just reach whoever sent it. Call the number you already have for Dad."); },
-        grandma: function () { api.hint("Grandma could help! But the quickest check is calling Dad's real number."); },
+        callparents: function () { to("call"); api.finish(true, sc.feedbackCall); },
+        callfake: function () { api.hint("That's the new number from the voice message. Calling it would just reach whoever sent it. Call the number you already have for Parents."); },
+        grandma: function () { api.hint("Grandma could help! But the quickest check is calling Parents' real number."); },
         app: function () { api.hint("That app can't check who sent the voice message."); }
       });
     },
 
     /* Module 11, scenario 1: a game player asks for a photo. Sending a
        photo (yours or a friend's) is the trap; Stop (close the game),
-       Screenshot (side buttons), Tell Dad, and Block are safe. */
+       Screenshot (side buttons), Tell Parents, and Block are safe. */
     justForMe: function (root, sc, api) {
       var kb = false, card = false, picker = false, shot = false, lines = [];
       function draw() {
@@ -2439,7 +2439,7 @@
 
     /* Module 11, scenario 2: a stranger offers a free skin for "a favor
        later". Accepting (even "but no favors") is the trap; Decline / "no
-       thanks", Block, Screenshot and Tell Dad are safe. */
+       thanks", Block, Screenshot and Tell Parents are safe. */
     giftStranger: function (root, sc, api) {
       var kb = false, card = false, shot = false, gift = "", lines = [];
       function draw() {
@@ -2481,7 +2481,7 @@
     /* Module 11, scenario 3: a class group chat laughs at an edited picture
        of Rosa (shown only as a blurred placeholder). Reacting, forwarding
        or "lol" are traps; leaving first is incomplete; Screenshot, a kind
-       DM to Rosa, and Tell Dad are safe. */
+       DM to Rosa, and Tell Parents are safe. */
     meanPicture: function (root, sc, api) {
       var view = "group", kb = false, sheet = false, shot = false, kind = false;
       function draw() {
@@ -2523,13 +2523,13 @@
         rtype: function () { kb = true; draw(); },
         kind: function () {
           kind = true; kb = false; draw();
-          api.hint("That was really kind. 💛 Now the other steps: a screenshot of what happened, and tell Dad or a teacher.");
+          api.hint("That was really kind. 💛 Now the other steps: a screenshot of what happened, and tell Parents or a teacher.");
         },
         leave: function () { api.finish(false, sc.feedbackLeave); },
-        home: function () { api.hint("Putting the phone down is OK. But Rosa still needs help: screenshot it and tell Dad or a teacher."); }
+        home: function () { api.hint("Putting the phone down is OK. But Rosa still needs help: screenshot it and tell Parents or a teacher."); }
       }, screenshotActs(root, api, function () {
         shot = true; kb = false; sheet = false; draw();
-        api.hint("📸 Screenshot saved! Now tell Dad or a teacher. (And being kind to Rosa helps too.)");
+        api.hint("📸 Screenshot saved! Now tell Parents or a teacher. (And being kind to Rosa helps too.)");
       })));
     }
   };
@@ -2540,7 +2540,7 @@
     html += '<p class="question">' + sc.question + "</p>";
     html += '<div id="simRoot" class="sim-root"></div>';
     html += '<p class="sim-hint" id="simHint" aria-live="polite" hidden></p>';
-    html += '<div class="sim-actions"><button type="button" class="btn primary" id="simTellDad">🙋 ' + (sc.dadLabel || "Ask Dad") + "</button></div>";
+    html += '<div class="sim-actions"><button type="button" class="btn primary" id="simTellParents">🙋 ' + (sc.parentsLabel || "Ask Parents") + "</button></div>";
     html += '<div id="result" aria-live="polite"></div>';
     html += '<button type="button" class="btn" id="back">← Back</button>';
     html += moduleNav(mi);
@@ -2583,7 +2583,7 @@
       var fn = acts[b.getAttribute("data-act")];
       if (fn) fn(b);
     });
-    document.getElementById("simTellDad").addEventListener("click", function () { finish(true, sc.feedbackDad || sc.feedbackGood); });
+    document.getElementById("simTellParents").addEventListener("click", function () { finish(true, sc.feedbackParents || sc.feedbackGood); });
     SIMS[sc.sim](root, sc, api);
   }
 
@@ -2605,7 +2605,7 @@
 
     if (step === 0) {
       html += '<div class="card">' + m.intro.map(function (p) { return "<p>" + p + "</p>"; }).join("");
-      if (mi !== 0) html += '<p class="small">Remember: Oops is OK. If anything goes wrong, tap 🙋 Tell Dad at the top.</p>';
+      if (mi !== 0) html += '<p class="small">Remember: Oops is OK. If anything goes wrong, tap 🙋 Tell Parents at the top.</p>';
       html += "</div>";
       if (m.rules) {
         html += '<div class="todo"><h3>The Accept-button rules</h3><ul>' + m.rules.map(function (r) { return "<li>" + r + "</li>"; }).join("") + "</ul></div>";
@@ -2619,10 +2619,10 @@
     }
 
     if (step === total - 1) {
-      html += '<div class="card debrief"><h2>Debrief: 4 questions</h2><p>Use these for anything online. Talk about them with Dad at dinner.</p><ol>' +
+      html += '<div class="card debrief"><h2>Debrief: 4 questions</h2><p>Use these for anything online. Talk about them with Parents at dinner.</p><ol>' +
         DEBRIEF.map(function (q) { return "<li>" + q[0] + "<span>" + q[1] + "</span></li>"; }).join("") + "</ol>" +
         '<p><strong>Dinner question:</strong> ' + m.dinner + "</p></div>";
-      html += '<div class="todo"><h3>Oops is OK 💛</h3><p style="margin:0">If you ever tap the wrong thing, tell Dad right away. You get help, not trouble.</p></div>';
+      html += '<div class="todo"><h3>Oops is OK 💛</h3><p style="margin:0">If you ever tap the wrong thing, tell Parents right away. You get help, not trouble.</p></div>';
       html += '<button type="button" class="btn primary" id="finish">' + (mi < MODULES.length - 1 ? "Mission done! Next mission →" : "Mission done! Back home 🎉") + "</button>";
       html += '<button type="button" class="btn" id="back">← Back</button>';
       html += moduleNav(mi);
@@ -2665,14 +2665,14 @@
     window.scrollTo(0, 0);
   }
 
-  /* ---------- Tell Dad button (always visible) ---------- */
-  var modal = document.getElementById("tellDadModal");
-  document.getElementById("tellDadBtn").addEventListener("click", function () {
+  /* ---------- Tell Parents button (always visible) ---------- */
+  var modal = document.getElementById("tellParentsModal");
+  document.getElementById("tellParentsBtn").addEventListener("click", function () {
     modal.hidden = false;
-    document.getElementById("tellDadClose").focus();
+    document.getElementById("tellParentsClose").focus();
   });
-  function closeModal() { modal.hidden = true; document.getElementById("tellDadBtn").focus(); }
-  document.getElementById("tellDadClose").addEventListener("click", closeModal);
+  function closeModal() { modal.hidden = true; document.getElementById("tellParentsBtn").focus(); }
+  document.getElementById("tellParentsClose").addEventListener("click", closeModal);
   modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !modal.hidden) closeModal(); });
 
