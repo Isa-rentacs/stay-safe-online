@@ -261,3 +261,24 @@ a { color: var(--brand-dark); }
 /* Parents page */
 .parents h2 { margin-top: 8px; }
 .parents section { margin-bottom: 18px; }
+
+/* Realistic simulation: fake Safari + toy game + phishing ad */
+.sim-browser { border: 3px solid #2a2d34; border-radius: 22px; overflow: hidden; margin: 0 0 12px; background: #fff; }
+.sim-tabbar { display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: #eef0f3; border-bottom: 1px solid var(--line); }
+.sim-tab { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #d5d8de; border-radius: 10px 10px 0 0; padding: 6px 8px; font-size: 0.9rem; font-weight: 600; }
+.sim-tab-close { width: 28px; height: 28px; border-radius: 50%; border: none; background: #dfe3e8; font-size: 0.95rem; font-weight: 700; cursor: pointer; }
+.sim-tab-close:active { background: #c6ccd3; }
+.sim-addr { flex: 1; background: #fff; border-radius: 10px; padding: 6px 10px; font-size: 0.82rem; color: #3a3f48; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sim-game { position: relative; padding: 12px; min-height: 260px; background: linear-gradient(#dff3ff, #fff8e1); }
+.sim-score { font-weight: 700; margin-bottom: 8px; }
+.sim-field { position: relative; height: 200px; }
+.sim-star { position: absolute; width: 52px; height: 52px; font-size: 2rem; background: transparent; border: none; cursor: pointer; }
+.sim-ad { position: absolute; inset: 0; background: rgba(20, 22, 28, 0.45); display: flex; align-items: center; justify-content: center; padding: 16px; z-index: 5; }
+.sim-ad[hidden] { display: none; }
+.sim-ad-box { position: relative; background: #fff7f7; border: 3px solid #d33; border-radius: 16px; padding: 18px 14px 14px; text-align: center; width: 100%; max-width: 340px; }
+.sim-ad-box h3 { font-size: 1.4rem; margin-bottom: 6px; }
+.sim-fake-x { position: absolute; top: 6px; right: 6px; width: 28px; height: 28px; border-radius: 50%; border: none; background: #e6e8ec; font-weight: 700; cursor: pointer; }
+.sim-claim, .sim-claim2 { display: block; width: 100%; min-height: 52px; margin: 8px 0 0; border: none; border-radius: 12px; font: inherit; font-weight: 800; cursor: pointer; }
+.sim-claim { background: #1db954; color: #fff; font-size: 1.1rem; }
+.sim-claim2 { background: #2f6fde; color: #fff; }
+.sim-actions { margin: 0 0 12px; }

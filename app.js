@@ -56,15 +56,13 @@
       ],
       scenarios: [
         {
-          title: "The scary lock screen",
-          screen: popup("Safari", "⛔ YOUR PHONE IS LOCKED", "Illegal activity detected. Pay $50 now to unlock your phone, or all your files will be deleted!", [["PAY NOW", "red"]]),
-          question: "You tapped a link in a game and this showed up. Your heart is pounding. What do you do?",
-          options: [
-            { text: "Hide the phone and hope it goes away.", good: false, feedback: "That's a totally normal feeling! But hiding means you're stuck with the scary feeling alone, and the trick keeps working on you." },
-            { text: "Tap PAY NOW so it stops.", good: false, feedback: "Oops, that's exactly what the trickster wants. Paying doesn't unlock anything, because the phone was never really locked. This is just a web page pretending." },
-            { text: "Stop, close the page, and tell Dad right now.", good: true, feedback: "Yes! This is a fake page trying to scare you into paying. Your phone is fine. Closing the tab and telling Dad fixes it in one minute." }
-          ],
-          todo: ["Scary message? Stop. Don't tap anything inside it.", "Close the tab or app.", "Tell Dad right away. You're not in trouble."]
+          title: "Play Star Catcher — then the ad pops up",
+          sim: "starAd",
+          question: "Play the toy game below. Tap the stars to score. After a bit, something will pop up — just like in a real game. Decide what to tap, for real. There is no list of answers here.",
+          todo: ["The little ✕ inside an ad is part of the ad — tapping it can still count as tapping the ad.", "The safe way out is the browser's own tab close, up in the tab bar, outside the ad.", "Closing the tab is always OK. Telling Dad is always OK."],
+          feedbackGood: "Yes! You closed the tab instead of tapping inside the ad. The ad was fake — there was no prize, and CLAIM would have tried to steal your account or install junk. Closing the tab stops it, and telling Dad fixes it in one minute.",
+          feedbackClaim: "Oops — that's what the trick wants. There is no prize. CLAIM and DOWNLOAD are the trap: they lead to a fake page that asks for your password, or tries to install junk. The phone was never going to give you free Robux.",
+          feedbackFakeX: "Oops — that little ✕ is part of the ad, not a real close button. In real ads the ✕ is often a tap area itself, so tapping it can open the bad page anyway. The real close is the browser's tab ✕, up in the tab bar, outside the ad."
         },
         {
           title: "Days later",
@@ -656,6 +654,88 @@
     return '<div class="nav-row">' + prev + next + "</div>";
   }
 
+  /* ---------- Realistic simulation: play a toy game, an ad pops up ----------
+     No multiple choice. She taps real things inside a fake browser:
+     the ad's CLAIM / DOWNLOAD / fake ✕ are traps; the browser's own
+     tab close (up in the tab bar, outside the ad), the Close tab
+     button, and Tell Dad are safe. */
+  function renderStarAd(mi, step, sc, headHtml) {
+    var m = MODULES[mi];
+    var html = headHtml;
+    html += '<p class="question">' + sc.question + "</p>";
+    html += '<div class="sim-browser">' +
+      '<div class="sim-tabbar"><span class="sim-tab">⭐ Star Catcher <button type="button" class="sim-tab-close" id="simTabClose" aria-label="Close this tab">✕</button></span>' +
+      '<span class="sim-addr">🔒 starcatcher.example</span></div>' +
+      '<div class="sim-game" id="simGame"><p class="sim-score">Score: <span id="simScore">0</span> &nbsp;·&nbsp; Tap the ⭐ stars!</p>' +
+      '<div class="sim-field" id="simField"></div>' +
+      '<div class="sim-ad" id="simAd" hidden><div class="sim-ad-box">' +
+      '<button type="button" class="sim-fake-x" id="simFakeX" aria-label="Close ad">✕</button>' +
+      "<h3>🎉 YOU WON!</h3><p><strong>FREE 10,000 Robux!</strong><br>Claim in <span id=\"simTimer\">10</span>s or it's gone!</p>" +
+      '<button type="button" class="sim-claim" id="simClaim">CLAIM NOW</button>' +
+      '<button type="button" class="sim-claim2" id="simDownload">⬇ DOWNLOAD</button>' +
+      '<p class="small" style="margin:8px 0 0">Only 2 left! 47 players are claiming now!</p>' +
+      "</div></div></div>" +
+      '<p class="small" style="margin:8px 0 0">This is a pretend Safari window. The ad\'s own ✕ is <em>inside</em> the ad. The browser\'s tab ✕ is up top, <em>outside</em> it.</p>' +
+      "</div>";
+    html += '<div class="sim-actions"><button type="button" class="btn" id="simCloseTab">Close this tab ✕</button>' +
+      '<button type="button" class="btn primary" id="simTellDad">🙋 Tell Dad</button></div>';
+    html += '<div id="result" aria-live="polite"></div>';
+    html += '<button type="button" class="btn" id="back">← Back</button>';
+    html += moduleNav(mi);
+    app.innerHTML = html;
+    document.getElementById("back").addEventListener("click", function () { goStep(mi, step - 1); });
+
+    var score = 0, spawnTimer = null, adTimer = null, done = false;
+    var field = document.getElementById("simField");
+    var ad = document.getElementById("simAd");
+    function stopGame() { if (spawnTimer) clearInterval(spawnTimer); if (adTimer) clearInterval(adTimer); spawnTimer = null; adTimer = null; }
+    function showAd() {
+      ad.hidden = false;
+      var t = 10;
+      var timerEl = document.getElementById("simTimer");
+      adTimer = setInterval(function () { t = t <= 1 ? 10 : t - 1; if (timerEl) timerEl.textContent = t; }, 1000);
+    }
+    function spawnStar() {
+      if (done || !ad.hidden) return;
+      var s = document.createElement("button");
+      s.type = "button"; s.className = "sim-star"; s.textContent = "⭐";
+      s.style.left = (5 + Math.random() * 80) + "%";
+      s.style.top = (10 + Math.random() * 70) + "%";
+      s.addEventListener("click", function () {
+        if (done) return;
+        score += 1;
+        document.getElementById("simScore").textContent = score;
+        if (s.parentNode) s.parentNode.removeChild(s);
+        if (score >= 5) { stopGame(); showAd(); }
+      });
+      field.appendChild(s);
+      setTimeout(function () { if (s.parentNode && !done) s.parentNode.removeChild(s); }, 1800);
+    }
+    spawnTimer = setInterval(spawnStar, 900);
+    setTimeout(function () { if (!done && ad.hidden) { stopGame(); showAd(); } }, 12000);
+
+    function outcome(good, feedback) {
+      if (done) return;
+      done = true; stopGame();
+      var r = '<div class="feedback ' + (good ? "good" : "oops") + '"><h3>' + (good ? "✅ Nice one!" : "💛 Oops is OK!") + "</h3><p style=\"margin:0\">" + feedback + "</p></div>";
+      if (!good) r += '<button type="button" class="btn" id="retrySim">Try the ad again</button>';
+      r += '<div class="todo"><h3>What to do</h3><ul>' + sc.todo.map(function (t) { return "<li>" + t + "</li>"; }).join("") + "</ul></div>";
+      r += '<button type="button" class="btn primary" id="next">' + (step < stepCount(m) - 1 ? "Next scenario →" : "To the debrief →") + "</button>";
+      var res = document.getElementById("result");
+      res.innerHTML = r;
+      var retry = document.getElementById("retrySim");
+      if (retry) retry.addEventListener("click", function () { renderStarAd(mi, step, sc, headHtml); window.scrollTo(0, 0); });
+      document.getElementById("next").addEventListener("click", function () { goStep(mi, step + 1); });
+      res.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    document.getElementById("simClaim").addEventListener("click", function () { outcome(false, sc.feedbackClaim); });
+    document.getElementById("simDownload").addEventListener("click", function () { outcome(false, sc.feedbackClaim); });
+    document.getElementById("simFakeX").addEventListener("click", function () { outcome(false, sc.feedbackFakeX); });
+    document.getElementById("simTabClose").addEventListener("click", function () { outcome(true, sc.feedbackGood); });
+    document.getElementById("simCloseTab").addEventListener("click", function () { outcome(true, sc.feedbackGood); });
+    document.getElementById("simTellDad").addEventListener("click", function () { outcome(true, sc.feedbackGood); });
+  }
+
   function goStep(mi, step) {
     state.last = { m: mi, step: step };
     save();
@@ -715,6 +795,7 @@
     /* Scenario step */
     var si = step - 1, sc = m.scenarios[si];
     html += "<h2>Scenario " + step + ": " + sc.title + "</h2>";
+    if (sc.sim === "starAd") { renderStarAd(mi, step, sc, html); return; }
     html += sc.screen;
     html += '<p class="question">' + sc.question + "</p>";
     html += '<div id="choices">' + sc.options.map(function (o, oi) {
