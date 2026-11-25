@@ -152,7 +152,9 @@ a { color: var(--brand-dark); }
 .steps { display: flex; gap: 6px; margin: 0 0 14px; }
 .steps span { flex: 1; height: 6px; border-radius: 3px; background: var(--line); }
 .steps span.on { background: var(--brand); }
-.question { font-weight: 700; margin: 14px 0 10px; }
+.question { font-weight: 700; margin: 14px 0 10px; scroll-margin-top: 80px; }
+
+html { scroll-padding-top: 80px; } /* keep scroll targets clear of the sticky top bar */
 
 .feedback { border-radius: var(--radius); padding: 16px; margin: 6px 0 14px; scroll-margin-top: 72px; }
 #result { scroll-margin-top: 72px; }
@@ -354,6 +356,8 @@ a { color: var(--brand-dark); }
 .sim-shophead { display: flex; align-items: center; justify-content: space-between; margin: 0 0 10px; }
 .sim-gback { min-height: 44px; padding: 0 10px; border: none; border-radius: 10px; background: rgba(255, 255, 255, 0.15); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
 .sim-deal { padding: 12px; border: 3px solid #ffcc00; border-radius: 16px; background: rgba(255, 255, 255, 0.08); text-align: center; }
+.sim-chest { margin: 0 0 8px; }
+.sim-freq { margin: 0 0 8px; }
 .sim-deal p { margin: 0 0 6px; }
 .sim-deal .small { color: #e0d6f5; }
 .sim-deal-t { font-weight: 800; color: #ffcc00; }
@@ -587,6 +591,43 @@ a { color: var(--brand-dark); }
 .sim-power { right: -12px; top: 110px; }
 .sim-power span { right: 26px; }
 .sim-side:active span { background: #0a6cff; }
-.sim-shot { position: absolute; left: 10px; bottom: 10px; z-index: 7; display: flex; flex-direction: column; align-items: center; width: 64px; padding: 6px 4px; border: 3px solid #fff; border-radius: 8px; background: #dfe6ef; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); font-size: 1.3rem; }
+.sim-shot { position: absolute; left: 10px; bottom: 76px; z-index: 7; display: flex; flex-direction: column; align-items: center; width: 64px; padding: 6px 4px; border: 3px solid #fff; border-radius: 8px; background: #dfe6ef; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); font-size: 1.3rem; }
 .sim-shot span { font-size: 0.6rem; color: #1f2430; }
 .sim-phone.sim-snap { animation: simSnap 0.35s; }
+
+/* Module 5 (scenarios 4-5) + Module 11 (scenario 4): press-and-hold link
+   preview, the "surprise" page (words only, a plain grey box), and a manga
+   site with a text-only grown-up ad */
+.sim-nosel, .sim-msglink, .sim-gclink { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+.sim-msglink { min-height: 44px; padding: 0; border: none; background: transparent; color: #0a6cff; font: inherit; text-decoration: underline; text-align: left; overflow-wrap: anywhere; cursor: pointer; touch-action: manipulation; }
+.sim-gclink { min-height: 44px; padding: 0 4px; border: none; background: transparent; color: #58a6ff; font: inherit; text-decoration: underline; text-align: left; overflow-wrap: anywhere; cursor: pointer; touch-action: manipulation; }
+.sim-lpv { align-items: flex-end; }
+.sim-lpbg { position: absolute; inset: 0; width: 100%; border: none; background: transparent; cursor: pointer; }
+.sim-lpcard { position: relative; width: 100%; max-width: 320px; padding: 12px; border-radius: 16px; background: #fff; color: #1f2430; text-align: center; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25); }
+.sim-lpprev { display: flex; align-items: center; justify-content: center; min-height: 64px; margin: 0 0 8px; border-radius: 10px; background: #eef0f3; font-size: 1.8rem; }
+.sim-lplabel { margin: 0; font-size: 0.8rem; color: var(--muted); }
+.sim-lpaddr { margin: 0 0 10px; font-size: 1.05rem; font-weight: 800; overflow-wrap: anywhere; }
+.sim-lpcard button { display: block; width: 100%; min-height: 44px; margin: 0 0 6px; border: 1px solid #d1d1d6; border-radius: 10px; background: #f2f2f7; color: #0a6cff; font: inherit; font-weight: 600; cursor: pointer; }
+.sim-adpage { text-align: center; background: #fff7f7; }
+.sim-adbox { margin: 0 0 8px; padding: 12px; border: 2px dashed #d33; border-radius: 10px; color: #d33; font-weight: 800; }
+.sim-tab-close.sim-big { flex: 0 0 44px; width: 44px; height: 44px; }
+.sim-addrbtn { min-width: 0; min-height: 44px; border: none; font: inherit; font-size: 0.82rem; cursor: pointer; }
+.sim-yuckpage { background: #e9e9ec; }
+.sim-yuck { margin: 0 0 10px; padding: 28px 14px; border-radius: 12px; background: #c9ccd2; color: #1f2430; font-weight: 700; text-align: center; }
+.sim-yuck small { display: block; margin-top: 6px; font-weight: 400; }
+.sim-yuckbtn { display: block; width: 100%; min-height: 48px; margin: 0 0 8px; border: none; border-radius: 12px; background: #fff; color: #1f2430; font: inherit; font-weight: 700; cursor: pointer; }
+.sim-closebar { padding: 6px 10px 8px; background: #f2f2f7; border-top: 1px solid #ddd; }
+.sim-closebar button { display: block; width: 100%; min-height: 44px; border: none; border-radius: 12px; background: #fff; color: #0a6cff; font: inherit; font-weight: 700; cursor: pointer; }
+.sim-manga { background: #fff8f0; }
+.sim-mangahead { margin: 0 0 2px; font-size: 1.15rem; font-weight: 800; color: #d6336c; }
+.sim-mangahead small { font-size: 0.8rem; color: var(--muted); }
+.sim-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 0 0 10px; }
+.sim-panels div { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 0; min-height: 120px; padding: 4px; border: 3px solid #1f2430; background: #fff; font-size: 0.85rem; font-weight: 700; text-align: center; line-height: 1.3; }
+.sim-panels span { font-size: 1.8rem; }
+.sim-panels small { font-size: 0.72rem; font-weight: 400; color: var(--muted); }
+.sim-xadbox { position: relative; margin: 0 0 10px; padding: 12px 44px 10px; border: 2px solid #c8ccd4; border-radius: 10px; background: #f6f0ff; text-align: center; }
+.sim-xadmark { position: absolute; left: 6px; top: 2px; font-size: 0.6rem; color: var(--muted); }
+.sim-xadx { position: absolute; top: 0; right: 0; width: 44px; height: 44px; padding: 0; border: none; background: transparent; cursor: pointer; }
+.sim-xadx span { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #e6e8ec; font-size: 0.75rem; font-weight: 700; }
+.sim-xadbody { display: block; width: 100%; min-height: 44px; border: none; background: transparent; color: #1f2430; font: inherit; font-weight: 800; cursor: pointer; }
+.sim-xadsee { min-height: 44px; padding: 0 18px; border: none; border-radius: 999px; background: #7b3fe4; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }

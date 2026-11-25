@@ -273,6 +273,31 @@
           feedbackInside: "Oops! Even the small OK is part of the scary page, so tapping it can open more pop-ups or a download. Don't tap buttons inside. Close the whole tab (tap the tabs button, then ✕) and tell Parents.",
           feedbackParents: "Yes! Telling Parents is exactly right. Websites can't look inside your phone to find viruses. This is just a scary page. Parents can close the tab (tabs button, then ✕).",
           parentsLabel: "Tell Parents"
+        },
+        {
+          title: "The kitten link",
+          sim: "kittenLink",
+          question: "Your game friend Kai (pretend) just sent you a text. Before you tap a link, press and hold it to see where it really goes. Try it on the pretend phone. (A quick tap opens the link. Tapping the bar at the very bottom goes to the Home Screen.)",
+          todo: ["Before you tap a link, press and hold it to see where it really goes.", "The words on a link can say one thing while the real address says another.", "One extra word in the address = a different site. Not sure? Don't open it, and ask Parents."],
+          feedbackGood: "Great checking! You pressed and held the link, and caught it. The words said kittyclips.example, but the real address said kittyclips-free.example. One extra word changes where it goes. And a link that looks like a site you know is not the same as the real site. Don't open was exactly right. (Friends can get tricked by links like this too.)",
+          feedbackClose: "Leaving it is always OK! Here's what was hiding: the words said kittyclips.example, but pressing and holding the link shows the real address, kittyclips-free.example. One extra word changes where it goes. A familiar-looking link is not the same as the real site. Next time, press and hold to check.",
+          feedbackTap: "The words on the link said kittyclips.example, but the real address underneath was kittyclips-free.example. One extra word sent you to a totally different site, with no kittens, just ads and a DOWNLOAD button. A familiar-looking link is not the same as the real site. Next time, press and hold first to see where it really goes.",
+          feedbackOpen: "You did the hard part: you pressed and held, and the preview showed the real address. But look again. The words said kittyclips.example, and the address said kittyclips-free.example. One extra word changes where it goes. A familiar-looking link is not the same as the real site. When they don't match, tap Don't open.",
+          feedbackParents: "Asking Parents is always OK! Together you'd press and hold the link: the words say kittyclips.example, but the real address is kittyclips-free.example. One extra word changes where it goes. A familiar-looking link is not the same as the real site.",
+          parentsLabel: "Tell Parents"
+        },
+        {
+          title: "The surprise link",
+          sim: "surpriseLink",
+          question: "You're playing a game, and someone posts a link in the chat. Do what you would really do on the pretend phone below. (Remember: you can press and hold a link to see where it really goes. Tapping the bar at the very bottom closes the game.)",
+          todo: ["A link that promises something fun can open something gross or scary.", "If it does, close it fast. It's not your fault: links like that are made to trick you.", "Don't share it. Tell Parents."],
+          feedbackGood: "Great job closing it fast! And it was not your fault for tapping: the link promised something funny, and it was designed to trick you. Closing it, not sharing it, and telling Parents is exactly right. Telling Parents also helps if what you saw keeps popping into your head.",
+          feedbackPreview: "Great checking! You pressed and held, and the address was weird: zzq7-shock-clips.example, not a funny-video site. Not opening it was smart. Links that promise 'funniest video ever' can open something gross or scary. If one ever does, it's not your fault: close it fast, don't share it, and tell Parents.",
+          feedbackBlock: "Blocking or reporting someone who posts weird links is OK! And if a link like that ever does open something gross or scary, it's not your fault: close it fast, don't share it, and tell Parents.",
+          feedbackShare: "Sharing something gross just spreads the yuck: then Mia sees it too, and she didn't get a choice. It wasn't your fault that it opened. The link was made to trick you. Close it fast, don't share it, and tell Parents.",
+          feedbackMore: "'Show more' just shows you more yucky stuff. Pages like this want to keep you looking. It wasn't your fault that it opened. The link was made to trick you. Close it fast, and tell Parents.",
+          feedbackParents: "Telling Parents is exactly right. Links that promise something fun can open something gross or scary, and that's never your fault: they're designed to trick you. Close it fast, don't share it, and tell Parents, like you just did.",
+          parentsLabel: "Tell Parents"
         }
       ],
       dinner: "Has Parents ever gotten a fake text? What did it say?"
@@ -493,7 +518,7 @@
           question: "You're at a friend's house. A voice message comes in from a number you don't know. Listen, then do what you would really do on the pretend phone below. (Tapping the bar at the very bottom goes to the Home Screen.)",
           todo: ["Voices and videos can be faked by AI.", "Use the family code word when someone is in a hurry.", "Call the person back on their real number."],
           feedbackGood: "Perfect! See? They couldn't say it. The family code word is something an AI can't guess. Calling your parents on their real number checks it too.",
-          feedbackCall: "Perfect! Calling Parents' real number checks it, and he had his phone the whole time. Asking for the family code word works too: it's something an AI can't guess.",
+          feedbackCall: "Perfect! Calling Parents' real number checks it, and they had their phone the whole time. Asking for the family code word works too: it's something an AI can't guess.",
           feedbackSend: "AI can copy voices from a few seconds of video. And remember: never share a texted code, even with someone who sounds like family.",
           feedbackAsk: "A faker will just say 'yes!' Ask for the family code word instead, and call Parents' real number.",
           feedbackParents: "Perfect! Checking with the real Parents is exactly right. Call them on their real number, or ask for the family code word. A faker can't guess it."
@@ -517,7 +542,7 @@
           feedbackGood: "Exactly right. Stop, screenshot, tell. You did nothing wrong, and telling Parents means you don't have to deal with it alone.",
           feedbackSend: "That's OK to wonder about. But a stranger asking for your picture is a 'stop and tell' moment, every time. You're not in trouble. Just tell Parents.",
           feedbackFriend: "Creative, but it's still sharing someone's photo with a stranger. Stop, screenshot, and tell Parents.",
-          feedbackBlock: "Blocking is OK! It's even better after you tell Parents, so he can see what happened. Stop, screenshot, tell. You did nothing wrong.",
+          feedbackBlock: "Blocking is OK! It's even better after you tell Parents, so they can see what happened. Stop, screenshot, tell. You did nothing wrong.",
           feedbackStop: "Stopping is the right first step, and you didn't send anything. Now the other two: screenshot, and tell Parents. You're not in trouble.",
           parentsLabel: "Tell Parents"
         },
@@ -541,6 +566,17 @@
           feedbackGood: "That takes courage. Not joining in, telling a grown-up, and being kind to Rosa is exactly what helps. And if it's ever you being picked on: stop, screenshot, tell.",
           feedbackLaugh: "It's hard not to go along with a group! But laughing or sharing makes it bigger, and Rosa would feel awful.",
           feedbackLeave: "Leaving is OK, but Rosa still needs help. Screenshot it and tell Parents or a teacher first.",
+          parentsLabel: "Tell Parents"
+        },
+        {
+          title: "The grown-up ad",
+          sim: "grownAd",
+          question: "You're reading a manga on a pretend Japanese manga site. Turn the pages, and if something appears, do what you would really do on the pretend phone below.",
+          todo: ["Grown-up (18+) ads show up on lots of sites, especially Japanese ones.", "Seeing one is not your fault. Don't tap it, and don't tap its little ✕: that's part of the ad.", "Close the tab, and tell Parents."],
+          feedbackGood: "Exactly right. You closed the tab without touching the ad. Ads like this show up on lots of sites, especially Japanese ones. Seeing one does not mean you did anything wrong. Grown-up ads are for grown-ups, so closing the tab and telling Parents is exactly right.",
+          feedbackAd: "Seeing that ad wasn't your fault: ads like this show up on lots of sites, especially Japanese ones. But tapping it takes you to a grown-up page, and grown-up ads are for grown-ups. Don't tap the ad. Close the tab, and tell Parents.",
+          feedbackAdX: "That little ✕ is part of the ad, so tapping it can open the ad anyway. Seeing the ad wasn't your fault: ads like this show up on lots of sites, especially Japanese ones. The safe way out is Safari's own tab close (tabs button, then ✕). Then tell Parents.",
+          feedbackParents: "Telling Parents is exactly right. Ads like this show up on lots of sites, especially Japanese ones, and seeing one does not mean you did anything wrong. Grown-up ads are for grown-ups. Close the tab, and Parents can help keep ads like this away.",
           parentsLabel: "Tell Parents"
         }
       ],
@@ -632,16 +668,15 @@
       '<button type="button" class="sim-claim" id="simClaim">CLAIM NOW</button>' +
       '<button type="button" class="sim-claim2" id="simDownload">⬇ DOWNLOAD</button>' +
       '<p class="small" style="margin:8px 0 0">Only 2 left! 47 players are claiming now!</p>' +
-      "</div></div></div>" +
-      '<p class="small" style="margin:8px 0 0">This is a pretend Safari window. The ad\'s own ✕ is <em>inside</em> the ad. The browser\'s tab ✕ is up top, <em>outside</em> it.</p>' +
-      "</div>";
+      "</div></div></div></div>" +
+      '<p class="small" style="margin:8px 0 0">This is a pretend Safari window. The ad\'s own ✕ is <em>inside</em> the ad. The browser\'s tab ✕ is up top, <em>outside</em> it.</p>';
     html += '<div class="sim-actions"><button type="button" class="btn" id="simCloseTab">Close this tab ✕</button>' +
       '<button type="button" class="btn primary" id="simTellParents">🙋 Tell Parents</button></div>';
     html += '<div id="result" aria-live="polite"></div>';
     html += '<button type="button" class="btn" id="back">← Back</button>';
     html += moduleNav(mi);
     app.innerHTML = html;
-    document.getElementById("back").addEventListener("click", function () { goStep(mi, step - 1); });
+    document.getElementById("back").addEventListener("click", function () { stopGame(); goStep(mi, step - 1); });
 
     var score = 0, spawnTimer = null, adTimer = null, done = false;
     var field = document.getElementById("simField");
@@ -651,10 +686,10 @@
       ad.hidden = false;
       var t = 10;
       var timerEl = document.getElementById("simTimer");
-      adTimer = setInterval(function () { t = t <= 1 ? 10 : t - 1; if (timerEl) timerEl.textContent = t; }, 1000);
+      adTimer = setInterval(function () { if (!timerEl.isConnected) { clearInterval(adTimer); return; } t = t <= 1 ? 10 : t - 1; timerEl.textContent = t; }, 1000);
     }
     function spawnStar() {
-      if (done || !ad.hidden) return;
+      if (done || !ad.hidden || !field.isConnected) return;
       var s = document.createElement("button");
       s.type = "button"; s.className = "sim-star"; s.textContent = "⭐";
       s.style.left = (5 + Math.random() * 80) + "%";
@@ -670,20 +705,23 @@
       setTimeout(function () { if (s.parentNode && !done) s.parentNode.removeChild(s); }, 1800);
     }
     spawnTimer = setInterval(spawnStar, 900);
-    setTimeout(function () { if (!done && ad.hidden) { stopGame(); showAd(); } }, 12000);
+    spawnStar(); /* a star is already there when the game opens, not an empty field */
+    setTimeout(function () { if (!done && ad.hidden && ad.isConnected) { stopGame(); showAd(); } }, 12000);
 
     function outcome(good, feedback) {
       if (done) return;
       done = true; stopGame();
+      if (good) ad.hidden = true; /* the tab is closed, so the ad is gone too */
       var r = '<div class="feedback ' + (good ? "good" : "oops") + '"><h3>' + (good ? "✅ Nice one!" : "💛 Oops is OK!") + "</h3><p style=\"margin:0\">" + feedback + "</p></div>";
       if (!good) r += '<button type="button" class="btn" id="retrySim">Try the ad again</button>';
       r += '<div class="todo"><h3>What to do</h3><ul>' + sc.todo.map(function (t) { return "<li>" + t + "</li>"; }).join("") + "</ul></div>";
-      r += '<button type="button" class="btn primary" id="next">' + (step < stepCount(m) - 1 ? "Next scenario →" : "To the debrief →") + "</button>";
+      if (good) r += '<button type="button" class="btn primary" id="next">' + (step < stepCount(m) - 1 ? "Next scenario →" : "To the debrief →") + "</button>";
       var res = document.getElementById("result");
       res.innerHTML = r;
       var retry = document.getElementById("retrySim");
       if (retry) retry.addEventListener("click", function () { renderStarAd(mi, step, sc, headHtml); window.scrollTo(0, 0); });
-      document.getElementById("next").addEventListener("click", function () { goStep(mi, step + 1); });
+      var next = document.getElementById("next");
+      if (next) next.addEventListener("click", function () { goStep(mi, step + 1); });
       res.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
     document.getElementById("simClaim").addEventListener("click", function () { outcome(false, sc.feedbackClaim); });
@@ -815,6 +853,55 @@
     };
   }
   function mix(a, b) { Object.keys(b).forEach(function (k) { a[k] = b[k]; }); return a; }
+  /* Press and hold: holding a [data-press] element for about 600ms calls
+     onLong(el), like the link preview on a real iPhone. A quick tap still
+     goes through data-act as normal. The tap handler calls wasLong()
+     first: it is true when this "tap" is just the end of a long press,
+     so the link does not also open. Right-click / the Android long-press
+     menu (contextmenu) shows the preview too. */
+  function pressHold(root, onLong) {
+    var timer = null, fired = false;
+    function cancel() { if (timer) { clearTimeout(timer); timer = null; } }
+    function live() { return root.isConnected && !root.classList.contains("sim-locked"); }
+    function target(e) { return e.target && e.target.closest ? e.target.closest("[data-press]") : null; }
+    root.addEventListener("pointerdown", function (e) {
+      cancel(); fired = false;
+      var el = target(e);
+      if (!el || !live()) return;
+      timer = setTimeout(function () {
+        timer = null;
+        if (!el.isConnected || !live()) return;
+        fired = true; onLong(el);
+      }, 600);
+    });
+    ["pointerup", "pointercancel"].forEach(function (t) { root.addEventListener(t, cancel); });
+    root.addEventListener("contextmenu", function (e) {
+      var el = target(e);
+      if (!el) return;
+      e.preventDefault();
+      cancel();
+      if (!fired && live()) { fired = true; onLong(el); }
+    });
+    return { wasLong: function () { var f = fired; fired = false; return f; } };
+  }
+  /* The press-and-hold link preview card: shows where a link really goes.
+     Added on top of the screen (into box), so the link underneath stays. */
+  function showLinkPreview(box, addr) {
+    if (!box || box.querySelector(".sim-lpv")) return;
+    box.insertAdjacentHTML("beforeend", '<div class="sim-overlay sim-lpv">' +
+      '<button type="button" class="sim-lpbg" data-act="lpdismiss" aria-label="Close the preview"></button>' +
+      '<div class="sim-lpcard" role="dialog" aria-label="Link preview">' +
+      '<div class="sim-lpprev" aria-hidden="true">🌐</div>' +
+      '<p class="sim-lplabel">This link really goes to:</p>' +
+      '<p class="sim-lpaddr">' + addr + "</p>" +
+      '<button type="button" data-act="lpopen">Open anyway</button>' +
+      '<button type="button" data-act="lpno">Don\'t open</button>' +
+      "</div></div>");
+  }
+  function hideLinkPreview(root) {
+    var p = root.querySelector(".sim-lpv");
+    if (p) p.remove();
+  }
 
   var SIMS = {
     /* Module 1, scenario 1: open the browser, then use the browser's own
@@ -1389,7 +1476,7 @@
       api.setActs({
         thread: thread,
         list: function () { api.hint("Going back leaves the text sitting in your inbox. Is there something you could do with it first?"); },
-        parents: function () { api.hint("That's your chat with Parents. The 🙋 Show Parents button below is the quickest way to show him the new text."); },
+        parents: function () { api.hint("That's your chat with Parents. The 🙋 Show Parents button below is the quickest way to show them the new text."); },
         grandma: function () { api.hint("That's Grandma's chat. The new text at the top is the one to look at."); },
         home: function () { api.hint("Leaving Messages is OK, but the text is still waiting in your inbox. Have you looked at it?"); },
         link: function () {
@@ -1510,10 +1597,11 @@
         cattab: function () { api.hint("That's your cat video tab, and it's fine. But the scary tab is still open."); },
         closecat: function () { api.hint("That closes the cat videos, which were fine. Which tab is the scary one?"); },
         closetab: function () {
+          /* The scary tab is closed: show the tab that is left, the cat videos. */
           root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
-            '<div class="sim-tabgrid"><div class="sim-tabcard"><div class="sim-tabcard-head"><span>🐱 kittyclips.example</span></div>' +
-            '<div class="sim-tabprev">🐱 Top 10<br>Cutest Cats</div></div></div>' +
-            '<div class="sim-tabbot"><span>1 Tab</span><span class="sim-link">Done</span></div></div>';
+            '<div class="sim-page"><h3>🐱 Top 10 Cutest Cats Ever</h3>' +
+            '<p>The scary tab is gone. You are back on your cat videos.</p></div>' +
+            safariBars("kittyclips.example") + "</div>";
           api.finish(true, sc.feedbackGood);
         },
         back: function () {
@@ -1527,6 +1615,113 @@
         fwd: function () { api.hint(browserBtn); },
         share: function () { api.hint(browserBtn); },
         bookmarks: function () { api.hint(browserBtn); }
+      });
+    },
+
+    /* Module 5, scenario 4: a friend texts a link whose words say
+       kittyclips.example, but the real address is kittyclips-free.example.
+       Press and hold shows the real address. A quick tap and "Open anyway"
+       are traps; "Don't open", leaving the thread / Messages, and Tell
+       Parents are safe. */
+    kittenLink: function (root, sc, api) {
+      var REAL = "kittyclips-free.example";
+      root.innerHTML = '<div class="sim-phone">' + phoneStatus() + '<div class="sim-rel">' +
+        msgHead("list", "K", "Kai (game friend)", "iMessage", "kai") +
+        '<div class="sim-thread"><p class="sim-day">Today 5:12 PM</p>' +
+        them("gg!! that last round was so fun 🎮") + mine("haha yes 😄") +
+        them("cute kittens!! 🐱") +
+        '<div class="bubble sim-nosel"><button type="button" class="sim-msglink" data-act="link" data-press="1">kittyclips.example</button></div>' +
+        them("u HAVE to watch") +
+        "</div>" +
+        '<button type="button" class="sim-compose" data-act="type">iMessage</button>' +
+        "</div>" + homeBar() + "</div>";
+      var hold = pressHold(root, function () { api.hint(""); showLinkPreview(root.querySelector(".sim-rel"), REAL); });
+      function leave(html) {
+        root.innerHTML = '<div class="sim-phone">' + phoneStatus() + html + homeBar() + "</div>";
+        api.finish(true, sc.feedbackClose);
+      }
+      function trapPage() {
+        root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
+          '<div class="sim-page sim-adpage"><h3>KITTYCLIPS-FREE</h3>' +
+          '<p class="sim-adbox">✨ flashing ad ✨</p><p class="sim-adbox">💥 another flashing ad 💥</p>' +
+          '<span class="sim-fakebuy">⬇ DOWNLOAD</span>' +
+          '<p class="small">(Pretend page: no kittens anywhere. Just flashing ads and a big DOWNLOAD button.)</p></div>' +
+          safariBars(REAL) + "</div>";
+      }
+      api.setActs({
+        link: function () {
+          if (hold.wasLong()) return; /* the end of a press and hold, not a tap */
+          trapPage();
+          api.finish(false, sc.feedbackTap);
+        },
+        lpopen: function () { trapPage(); api.finish(false, sc.feedbackOpen); },
+        lpno: function () { hideLinkPreview(root); api.finish(true, sc.feedbackGood); },
+        lpdismiss: function () { hideLinkPreview(root); api.hint("Preview closed. The link is still there. What will you do with it?"); },
+        kai: function () { api.hint("That's Kai's contact card. The link is the thing to check. Press and hold it to see where it really goes."); },
+        type: function () { api.hint("You could reply to Kai later. First: where does that link really go? Press and hold it to peek."); },
+        list: function () {
+          leave('<div class="sim-inbox"><p class="sim-inbox-t">Messages</p>' +
+            inRow("x", "K", "Kai (game friend)", "u HAVE to watch", "5:12 PM") +
+            inRow("x", "P", "Parents", "love u! pizza tonight? 🍕", "3:12 PM") + "</div>");
+        },
+        home: function () {
+          leave(homeScreen([["x", "📷", "Camera", "#8e8e93"], ["x", "🌸", "Photos", "#fff0f5"], ["x", "⚙️", "Settings", "#d1d1d6"]],
+            [["x", "📞", "Phone", "#34c759"], ["x", "🧭", "Safari", "#e3f0ff"], ["x", "💬", "Messages", "#34c759"], ["x", "🎵", "Music", "#ffe3e8"]]));
+        }
+      });
+    },
+
+    /* Module 5, scenario 5: "funniest video ever" in game chat opens a
+       gross/scary page, shown ONLY as a plain grey box with words. On that
+       page, Share with Mia and Show more are traps; the tab ✕, Close tab
+       and Tell Parents are safe. Press and hold shows a weird address
+       ("Don't open" is safe too); blocking the poster is safe. */
+    surpriseLink: function (root, sc, api) {
+      var REAL = "zzq7-shock-clips.example";
+      var card = false;
+      function chat() {
+        root.innerHTML = '<div class="sim-phone">' + phoneStatus() + '<div class="sim-gc sim-rel">' +
+          '<div class="sim-gcworld" aria-hidden="true">🏝️ 🌴 🏠 🌴<br>🧍 🐢 🌼 🦀</div>' +
+          '<div class="sim-gclog">' +
+          gcLine("Pixel_Pal", "pal", "anyone wanna race to the island? 🏁") +
+          gcLine("LOLmaster_77", "lol", "funniest video ever 😂 you HAVE to see this") +
+          '<p class="sim-gcmsg sim-nosel"><button type="button" class="sim-gcname" data-act="lol">LOLmaster_77</button> ' +
+          '<button type="button" class="sim-gclink" data-act="link" data-press="1">▶ funniest-video.example</button></p>' +
+          "</div>" +
+          '<button type="button" class="sim-gcin" data-act="type">Say something…</button>' +
+          (card ? playerCard("😂", "LOLmaster_77", "Level 2 · Not someone you know in real life",
+            [["block", "🚫 Block", "danger"], ["block", "⚠️ Report", "danger"], ["close", "Close"]]) : "") +
+          "</div>" + homeBar() + "</div>";
+      }
+      function page() {
+        api.hint("");
+        root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
+          '<div class="sim-tabbar"><span class="sim-tab">🙈 Video <button type="button" class="sim-tab-close sim-big" data-act="closetab" aria-label="Close this tab">✕</button></span>' +
+          '<button type="button" class="sim-addr sim-addrbtn" data-act="addr">' + REAL + "</button></div>" +
+          '<div class="sim-page sim-yuckpage">' +
+          '<div class="sim-yuck">🙈 This page shows something gross and scary.<small>(Pretend — nothing real is shown here.)</small></div>' +
+          '<button type="button" class="sim-yuckbtn" data-act="share">📤 Share with Mia</button>' +
+          '<button type="button" class="sim-yuckbtn" data-act="more">▶ Show more</button>' +
+          "</div>" +
+          '<div class="sim-closebar"><button type="button" data-act="closetab">✕ Close tab</button></div></div>';
+      }
+      chat();
+      var hold = pressHold(root, function () { api.hint(""); card = false; showLinkPreview(root.querySelector(".sim-rel"), REAL); });
+      api.setActs({
+        link: function () { if (hold.wasLong()) return; page(); },
+        lpopen: page,
+        lpno: function () { hideLinkPreview(root); api.finish(true, sc.feedbackPreview); },
+        lpdismiss: function () { hideLinkPreview(root); api.hint("Preview closed. The link is still there in the chat. What will you do?"); },
+        share: function () { api.finish(false, sc.feedbackShare); },
+        more: function () { api.finish(false, sc.feedbackMore); },
+        closetab: function () { chat(); api.finish(true, sc.feedbackGood); },
+        addr: function () { api.hint(REAL + ". That's not a funny-video site at all. How can you get out of here fast?"); },
+        lol: function () { card = true; chat(); },
+        close: function () { card = false; chat(); },
+        block: function () { card = false; chat(); api.finish(true, sc.feedbackBlock); },
+        pal: function () { api.hint("Pixel_Pal just wants to race. The link from LOLmaster_77 is the thing to think about."); },
+        type: function () { api.hint("You could chat, but what about that link? You can press and hold it to see where it really goes."); },
+        home: function () { api.hint("Closing the game is OK! The link is still sitting in the chat, though. What would you do about it?"); }
       });
     },
 
@@ -2531,6 +2726,85 @@
         shot = true; kb = false; sheet = false; draw();
         api.hint("📸 Screenshot saved! Now tell Parents or a teacher. (And being kind to Rosa helps too.)");
       })));
+    },
+
+    /* Module 11, scenario 4: a manga site (manga-fun.example) shows a
+       text-only grown-up banner ad. Tapping the ad / See more and the ad's
+       own ✕ are traps; Safari's tabs button → ✕ on the tab and Tell
+       Parents are safe. No images, no suggestive words anywhere. */
+    grownAd: function (root, sc, api) {
+      var pg = 1, ad = false;
+      var PANELS = [
+        ["🐱🥷", "「いくぞ!」", "\"Let's go!\""], ["🌸💨", "「はやい!」", "\"So fast!\""],
+        ["🐱🍙", "「おなかすいた…」", "\"I'm hungry…\""], ["🏯🌙", "「またあした!」", "\"See you tomorrow!\""]
+      ];
+      function panel(p) { return "<div><span>" + p[0] + "</span>" + p[1] + "<small>" + p[2] + "</small></div>"; }
+      function page() {
+        var a = PANELS[(pg - 1) * 2 % PANELS.length], b = PANELS[((pg - 1) * 2 + 1) % PANELS.length];
+        root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
+          '<div class="sim-page sim-manga">' +
+          '<p class="sim-mangahead">📚 Manga Fun <small>まんが</small></p>' +
+          '<p class="small" style="margin:0 0 6px">Sakura Ninja Cats · Chapter 12 · Page ' + pg + " / 20</p>" +
+          (ad ? '<div class="sim-xadbox"><span class="sim-xadmark">Ad</span>' +
+            '<button type="button" class="sim-xadx" data-act="adx" aria-label="Close ad"><span>✕</span></button>' +
+            '<button type="button" class="sim-xadbody" data-act="ad">🔞 18+ · For grown-ups only</button>' +
+            '<button type="button" class="sim-xadsee" data-act="ad">See more</button></div>' : "") +
+          '<div class="sim-panels">' + panel(a) + panel(b) + "</div>" +
+          '<button type="button" class="sim-gbtn" data-act="next">Next page ›</button>' +
+          "</div>" + safariBars("manga-fun.example") + "</div>";
+      }
+      function tabs() {
+        api.hint("");
+        root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
+          '<div class="sim-tabgrid">' +
+          '<div class="sim-tabcard"><div class="sim-tabcard-head"><span>📚 manga-fun.example</span>' +
+          '<button type="button" class="sim-tabx" data-act="closetab" aria-label="Close manga-fun tab">✕</button></div>' +
+          '<button type="button" class="sim-tabprev" data-act="opentab">📚 Sakura<br>Ninja Cats</button></div>' +
+          "</div>" +
+          '<div class="sim-tabbot"><span>1 Tab</span><button type="button" class="sim-link" data-act="opentab">Done</button></div></div>';
+      }
+      function adPage(fb) {
+        root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
+          '<div class="sim-page sim-yuckpage"><div class="sim-yuck">🔞 This is a website for grown-ups only.' +
+          "<small>(Pretend — nothing is shown here.)</small></div></div>" +
+          safariBars("grownup-ads.example") + "</div>";
+        api.finish(false, fb);
+      }
+      page();
+      /* The ad also shows up by itself after a few seconds, like real ads do. */
+      setTimeout(function () {
+        if (ad || !root.isConnected || root.classList.contains("sim-locked") || !root.querySelector(".sim-manga")) return;
+        ad = true; page();
+      }, 5000);
+      var browserBtn = "That's one of Safari's own buttons. Good thinking, but it won't close this page.";
+      api.setActs({
+        next: function () {
+          pg += 1;
+          if (ad) api.hint("The ad came along to the next page too. Ads like this can follow you around a site.");
+          ad = true; page();
+        },
+        ad: function () { adPage(sc.feedbackAd); },
+        adx: function () { adPage(sc.feedbackAdX); },
+        tabs: tabs,
+        opentab: function () { page(); },
+        closetab: function () {
+          root.innerHTML = '<div class="sim-phone">' + phoneStatus() +
+            '<div class="sim-page"><p class="sim-libhead">Start Page</p>' +
+            "<p>The manga tab is closed, and the ad went with it.</p></div></div>";
+          api.finish(true, sc.feedbackGood);
+        },
+        back: function () {
+          if (!ad) { api.hint("You can always leave! But first, turn a page and keep reading."); return; }
+          api.hint("Back just goes to the last page of this site, and the ad can follow you there. Safari's tabs button can close the whole tab.");
+        },
+        addr: function () {
+          api.hint(ad ? "manga-fun.example: a normal manga site. Its ads come from lots of other places, and some are for grown-ups." :
+            "manga-fun.example: a manga site.");
+        },
+        fwd: function () { api.hint(browserBtn); },
+        share: function () { api.hint(browserBtn); },
+        bookmarks: function () { api.hint(browserBtn); }
+      });
     }
   };
 
@@ -2556,15 +2830,19 @@
       done = true;
       hintEl.hidden = true;
       root.classList.add("sim-locked");
+      /* Close any open sheet / player card / pop-up: the scenario is over,
+         the phone should show its normal screen again. */
+      root.querySelectorAll(".sim-overlay").forEach(function (el) { el.remove(); });
       var r = '<div class="feedback ' + (good ? "good" : "oops") + '"><h3>' + (good ? "✅ Nice one!" : "💛 Oops is OK!") + "</h3><p style=\"margin:0\">" + feedback + "</p></div>";
       if (!good) r += '<button type="button" class="btn" id="retrySim">Try it again</button>';
       r += '<div class="todo"><h3>What to do</h3><ul>' + sc.todo.map(function (t) { return "<li>" + t + "</li>"; }).join("") + "</ul></div>";
-      r += '<button type="button" class="btn primary" id="next">' + (step < stepCount(m) - 2 ? "Next scenario →" : "To the debrief →") + "</button>";
+      if (good) r += '<button type="button" class="btn primary" id="next">' + (step < stepCount(m) - 2 ? "Next scenario →" : "To the debrief →") + "</button>";
       var res = document.getElementById("result");
       res.innerHTML = r;
       var retry = document.getElementById("retrySim");
       if (retry) retry.addEventListener("click", function () { renderSim(mi, step, sc, headHtml); window.scrollTo(0, 0); });
-      document.getElementById("next").addEventListener("click", function () { goStep(mi, step + 1); });
+      var next = document.getElementById("next");
+      if (next) next.addEventListener("click", function () { goStep(mi, step + 1); });
       res.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
     var api = {
