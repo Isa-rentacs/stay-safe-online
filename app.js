@@ -432,6 +432,18 @@
           feedbackNice: "Asking nicely is good, but she can't know if it was already saved or shared. Shared = forever.",
           feedbackKeep: "Oops! Nora asked everyone to delete it. Saving it or sending it on makes another copy she can never get back. Shared = forever, so be the friend who deletes.",
           feedbackParents: "Asking Parents is always OK! They'd say: once a photo leaves your phone, you can't be sure it's gone. Someone could have saved it or screenshotted it. If a photo gets out, telling a grown-up helps. Oops is OK."
+        },
+        {
+          title: "Not yours to share",
+          sim: "notYours",
+          question: "Someone just posted a photo of Nora in the class chat. Do what you would really do on the pretend phone below.",
+          todo: ["If it's about someone else, ask them first. Photos, addresses, phone numbers, secrets: it's their choice, not yours.", "Sharing without asking can hurt, even if it seems funny. Don't forward it, and don't 😂 it.", "Already shared something? Tell Parents. That's how you help fix it."],
+          feedbackGood: "That's a kind, brave choice. The photo is about Nora, so sharing it is Nora's choice, not yours. Sharing it without asking can hurt her, even if it seems funny. The same rule goes for photos, addresses, phone numbers and secrets: if it's about someone else, ask them first. And if you ever already shared something, telling Parents is how you help fix it.",
+          feedbackAsk: "Yes! You asked Nora first, and she said no, so it stays unshared. The photo is about Nora, so sharing it is Nora's choice, not yours. Sharing it without asking can hurt her, even if it seems funny. Photos, addresses, phone numbers, secrets: if it's about someone else, ask them first. And if you ever already shared something, telling Parents is how you help fix it.",
+          feedbackForward: "It's hard not to go along when everyone is laughing! But the photo is about Nora, so sharing it is Nora's choice, not yours. Forwarding it sends it to even more people, and Nora would feel awful. Sharing without asking can hurt, even if it seems funny. If it's about someone else, ask them first. And if you ever already shared something, telling Parents is how you help fix it.",
+          feedbackLaugh: "It's hard not to laugh along with a group! But a 😂 joins in and makes it bigger, and Nora would feel awful seeing everyone laugh at her. The photo is about Nora, so it's her choice, not yours. Instead you can not share it, ask Nora first, or tell Parents.",
+          feedbackParents: "Telling Parents (or a teacher) is exactly right. They can help Nora and help stop the photo spreading. The photo is about Nora, so sharing it is Nora's choice, not yours, and sharing without asking can hurt her even if it seems funny. Photos, addresses, phone numbers, secrets: if it's about someone else, ask them first. And if you ever already shared something, telling Parents is how you help fix it.",
+          parentsLabel: "Tell Parents"
         }
       ],
       dinner: "What's one 'puzzle piece' that's okay to share, and one that isn't?"
@@ -2272,6 +2284,85 @@
         honest: function () { say("not for sure 😬 Ben took a screenshot. maybe tell ur parents?", "oh no 😳 ok i'll tell him. thx for being honest 💛", true, sc.feedbackGood); },
         list: function () { api.hint("Nora is waiting for an answer. Is her photo really gone?"); },
         home: function () { api.hint("Nora is waiting for an answer. Is her photo really gone?"); }
+      });
+    },
+
+    /* Module 8, scenario 4: the class group chat (same Class 5B as Module
+       11) laughs at a photo of Nora tripping at lunch (described in words
+       only, a plain grey placeholder) and asks you to forward it. 😂 React,
+       Forward… → any chat, and the laughing / "sending it" replies are traps;
+       "not sharing it", asking Nora first in a DM, and Tell Parents are safe. */
+    notYours: function (root, sc, api) {
+      var view = "group", kb = false, sheet = "", nora = [];
+      function draw() {
+        var body;
+        if (view === "group") {
+          body = msgHead("list", "👥", "Class 5B (pretend)", "24 people ›", "info") +
+            '<div class="sim-thread"><p class="sim-day">Today 12:40 PM</p>' +
+            '<p class="sim-who">Ty</p><button type="button" class="sim-photobub sim-blurpic" data-act="pic">📷<span>photo of Nora tripping at lunch</span></button>' +
+            them("nora tripped in the lunchroom 😂 her spaghetti went EVERYWHERE", "Ty") +
+            them("😂😂😂", "Ava") +
+            them("forward this, it's hilarious!!", "Ben") +
+            them("send it to the other class too lol", "Ty") + "</div>" +
+            '<button type="button" class="sim-compose" data-act="type">Message</button>' +
+            (kb ? quickReplies([["laugh", "😂😂😂"], ["fwdtext", "ok sending it to everyone!"], ["noshare", "i'm not sharing it. it's Nora's photo, not mine"], ["askfirst", "we should ask Nora first"]]) : "") +
+            (sheet === "pic" ? actionSheet([["laugh", "😂 React"], ["fwd", "Forward…"], ["save", "Save to Photos"]]) : "") +
+            (sheet === "fwd" ? actionSheet([["sent", "👥 Class 5A (pretend)"], ["sent", "💬 Mia (pretend)"], ["sent", "💬 Kai (pretend)"]]) : "");
+        } else if (view === "info") {
+          body = '<div class="sim-page"><button type="button" class="sim-link" data-act="togroup">‹ Back</button><p class="sim-libhead">👥 Class 5B (pretend)</p>' +
+            '<div class="sim-row"><span>Ty</span></div><div class="sim-row"><span>Ava</span></div><div class="sim-row"><span>Ben</span></div>' +
+            '<button type="button" class="sim-row" data-act="nora"><span>Nora</span><span>💬 ›</span></button>' +
+            '<div class="sim-row"><span>Rosa</span></div>' +
+            '<div class="sim-row"><span class="small">+ 19 more</span></div>' +
+            '<button type="button" class="sim-row sim-redrow" data-act="leave"><span>Leave this Conversation</span></button></div>';
+        } else {
+          body = msgHead("togroup", "N", "Nora (pretend)", "") +
+            '<div class="sim-thread">' + (nora.length ? nora.join("") : '<p class="sim-day">No messages yet</p>') + "</div>" +
+            '<button type="button" class="sim-compose" data-act="ntype">Text Message</button>' +
+            (kb ? quickReplies([["ask", "hey, someone posted a pic of u tripping at lunch in the class chat. is it ok if people share it? 💛"]]) : "");
+        }
+        root.innerHTML = '<div class="sim-phone">' + phoneStatus() + '<div class="sim-rel">' + body + "</div>" + homeBar() + "</div>";
+      }
+      draw();
+      function to(v) { view = v; kb = false; sheet = ""; draw(); }
+      /* A trap: a typed reply shows up in the chat; a 😂 reaction from the sheet just ends it. */
+      function say(msg, fb) {
+        var typed = kb;
+        kb = false; sheet = ""; draw();
+        if (typed) root.querySelector(".sim-thread").insertAdjacentHTML("beforeend", mine(msg));
+        api.finish(false, fb);
+      }
+      api.setActs({
+        pic: function () { sheet = "pic"; kb = false; draw(); },
+        cancel: function () { sheet = ""; draw(); },
+        type: function () { kb = true; sheet = ""; draw(); },
+        laugh: function () { say("😂😂😂", sc.feedbackLaugh); },
+        fwdtext: function () { say("ok sending it to everyone!", sc.feedbackForward); },
+        fwd: function () { sheet = "fwd"; draw(); },
+        sent: function () { sheet = ""; draw(); api.finish(false, sc.feedbackForward); },
+        save: function () { sheet = ""; draw(); api.hint("Saving makes another copy on your phone. The photo is about Nora. What would she want?"); },
+        noshare: function () {
+          kb = false; draw();
+          root.querySelector(".sim-thread").insertAdjacentHTML("beforeend", mine("i'm not sharing it. it's Nora's photo, not mine"));
+          api.finish(true, sc.feedbackGood);
+        },
+        askfirst: function () {
+          kb = false; draw();
+          root.querySelector(".sim-thread").insertAdjacentHTML("beforeend", mine("we should ask Nora first"));
+          api.finish(true, sc.feedbackGood);
+        },
+        info: function () { to("info"); },
+        togroup: function () { to("group"); },
+        nora: function () { to("nora"); },
+        ntype: function () { kb = true; draw(); },
+        ask: function () {
+          nora = [mine("hey, someone posted a pic of u tripping at lunch in the class chat. is it ok if people share it? 💛"), them("omg no 😭 please don't share it. thank u for asking")];
+          kb = false; draw();
+          api.finish(true, sc.feedbackAsk);
+        },
+        leave: function () { api.hint("Leaving is OK, and it means you won't share it. But the chat is still asking you to. What would you tell them, or who could you ask?"); },
+        list: function () { api.hint("The chat is still waiting for you to forward the photo. What would you really do?"); },
+        home: function () { api.hint("Putting the phone down is OK, and you didn't share it. But the chat is still asking you to. What would you really do?"); }
       });
     },
 
